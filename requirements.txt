@@ -2,4 +2,4 @@ Flask
 PyJWT
 scikit-learn
 redis
-
+bcrypt

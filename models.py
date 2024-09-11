@@ -1,5 +1,5 @@
 import json
-from redis_client import redis_client
+from redis_service import redis_client
 
 class User:
     def __init__(self, username):
@@ -39,10 +39,16 @@ class Movie:
             movies.append(Movie.from_redis(movie))
         return movies
 
+
     @staticmethod
     def from_redis(redis_movie):
-        return {
-            'title': redis_movie['title'].decode('utf-8'),
-            'description': redis_movie['description'].decode('utf-8'),
-            'cast': redis_movie['cast'].decode('utf-8')
-        }
+        try:
+            return {
+                'title': redis_movie.get(b'title', b'').decode('utf-8') ,
+                'description': redis_movie.get(b'description', b'').decode('utf-8') ,
+                'cast': redis_movie.get(b'cast', b'').decode('utf-8'),
+                'releaseYear': redis_movie.get(b'release_year', b'').decode('utf-8'),
+            }
+        except KeyError as e:
+            print(f"KeyError: {e} is missing in redis_movie: {redis_movie}")
+            return {}
