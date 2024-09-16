@@ -3,7 +3,9 @@ from services.auth import authenticate_user, register_user, login_required
 from services.recommender import get_recommendations
 from models import Movie, User
 import json
-from redis_service import insert_movie_into_redis
+from redis_service import insert_movie, exists
+from services.embedding_service import get_embeddings
+
 
 
 main_routes = Blueprint('main_routes', __name__)
@@ -39,12 +41,18 @@ def get_movies(user):
 # User Action: Watched/Not Watched, Rating Route
 @main_routes.route('/movies/action', methods=['POST'])
 @login_required
-def movie_action(user):
+def movie_action(user: User):
     movie_id = request.json.get('movie_id')
     watched = request.json.get('watched')
     rating = request.json.get('rating', None)
-    
-    user.update_movie_status(movie_id, watched, rating)
+    # user_instance = User(username=user)
+    movie_key = f"movie:{movie_id}"
+    movie_exists = exists(movie_key)
+
+    if not movie_exists:
+        return jsonify({'message': 'Movie not found.'}), 404
+
+    user.update_movie_status(movie_key, watched, rating)
     return jsonify({'message': 'Action updated successfully'}), 200
 
 # Get Recommendations Route
@@ -64,7 +72,16 @@ def load_movies():
         
         # Insert each movie into Redis
         for movie in movies:
-            insert_movie_into_redis(movie)       
+            # Compute the embedding for the movie (assuming based on the description)
+            plot_description = movie.get('description', '')
+            if plot_description:
+                embedding = get_embeddings(plot_description)  # This function computes the movie embedding vector
+                # movie['embedding'] = embedding  # Add the embedding directly to the movie object
+            else:
+                print("error in embedding")
+            
+            # Insert the updated movie (with the embedding) into Redis
+            insert_movie(movie, embedding)   
         return jsonify({'message': f'{len(movies)} movies inserted into Redis successfully!'}), 200
     
     except FileNotFoundError:

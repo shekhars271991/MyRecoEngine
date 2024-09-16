@@ -6,16 +6,16 @@ redis_client = redis.Redis(
     port='6379'
 )
 
-def insert_movie_into_redis(movie):
-    movie_key = f"movie:{movie['title'].replace(' ', '_').lower()}"
+# def insert_movie_into_redis(movie):
+#     movie_key = f"movie:{movie['title'].replace(' ', '_').lower()}"
     
-    # Insert the movie into Redis using hset
-    redis_client.hset(movie_key, mapping={
-        'title': movie['title'],
-        'description': movie['description'],
-        'cast': ', '.join(movie['cast']),
-        'release_year': movie['release_year']
-    })
+#     # Insert the movie into Redis using hset
+#     redis_client.hset(movie_key, mapping={
+#         'title': movie['title'],
+#         'description': movie['description'],
+#         'cast': ', '.join(movie['cast']),
+#         'release_year': movie['release_year']
+#     })
 
 def get_movie_from_redis(title):
     movie_key = f"movie:{title.replace(' ', '_').lower()}"
@@ -27,3 +27,17 @@ def get_movie_from_redis(title):
         return movie_data
     return None
 
+
+def insert_movie(movie, summary_embeddings):
+    movie_key = f"movie:{movie['title'].replace(' ', '_').lower()}"
+    metadata = {
+        'title': movie['title'],
+        'description': movie['description'],
+        'cast': ', '.join(movie['cast']),
+        'release_year': movie['release_year'],
+        'embeddings': summary_embeddings.tolist()
+    }
+    redis_client.json().set(movie_key, '.', metadata)
+    
+def exists(key):
+    return redis_client.exists(key)

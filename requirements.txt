@@ -3,3 +3,4 @@ PyJWT
 scikit-learn
 redis
 bcrypt
+sentence_transformers
