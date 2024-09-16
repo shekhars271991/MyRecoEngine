@@ -52,7 +52,11 @@ def movie_action(user: User):
     if not movie_exists:
         return jsonify({'message': 'Movie not found.'}), 404
 
-    user.update_movie_status(movie_key, watched, rating)
+    try:
+        user.update_movie_status(movie_id, watched, rating)
+    except ValueError as e:
+        return jsonify({'message': str(e)}), 400
+    # user.update_movie_status(movie_key, watched, rating)
     return jsonify({'message': 'Action updated successfully'}), 200
 
 # Get Recommendations Route
