@@ -1,3 +1,5 @@
+# models.py
+
 import json
 from redis_service import redis_client
 
@@ -16,14 +18,27 @@ class User:
         
         # If the movie is watched, update the status and rating
         if watched:
-            profile['watched'].append(movie_id)
+            # Add a check to prevent duplicate entries
+            if movie_id not in profile['watched']:
+                profile['watched'].append(movie_id)
+            else:
+                print(f"Movie {movie_id} is already in the watched list.")
             if rating:
                 profile['ratings'][movie_id] = rating
                 # Fetch the movie's plot vector (assume we store it as "movie:<id>:vector")
                 movie_plot_vector = Movie.get_movie_vector(movie_id)
                 # Update the user's feature vector based on rating and plot vector
-                profile['feature_weights'] = self._update_profile_vector(profile['feature_weights'], movie_plot_vector, rating)
-
+                profile['feature_weights'] = self._update_profile_vector(
+                    profile['feature_weights'], movie_plot_vector, rating
+                )
+        else:
+            # Optionally, handle the case where the user marks a movie as not watched
+            if movie_id in profile['watched']:
+                profile['watched'].remove(movie_id)
+                profile['ratings'].pop(movie_id, None)
+                # Recalculate the feature_weights if necessary
+                # (You might want to implement logic to adjust the feature vector accordingly)
+        
         # Save the updated profile back to Redis
         redis_client.json().set(self.profile_key, '.', profile)
 
@@ -48,7 +63,6 @@ class User:
         }
         redis_client.json().set(self.profile_key, '.', default_profile)
         return default_profile
-
 
 class Movie:
     @staticmethod
@@ -79,11 +93,6 @@ class Movie:
         Fetch the movie's plot vector from Redis.
         Assume the plot vector is stored as "movie:<id>:vector" in Redis.
         """
-        
-        movie = redis_client.json().get(movie_id)
-        return movie['embeddings']
-        # if movie_vector:
-        #     return movie_vector
-        # else:
-        #     print(f"No vector found for movie_id {movie_id}")
-        #     return [0] * 6  # Assuming a 6-dimensional vector, replace with your actual dimensions
+        movie_key = f"movie:{movie_id}"
+        movie = redis_client.json().get(movie_key)
+        return movie['embeddings'] if movie and 'embeddings' in movie else [0] * 6
