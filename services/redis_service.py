@@ -50,7 +50,7 @@ def insert_movie(movie, movie_vector):
 
     # Prepare the data to store
     movie_data = movie.copy()
-    movie_data['embedding'] = movie_vector.tolist()
+    movie_data['embeddings'] = movie_vector.tolist()
 
     # Store the movie data as a JSON document
     redis_client.json().set(movie_key, '$', movie_data)

@@ -1,6 +1,6 @@
 
 import numpy as np
-from config import VECTOR_DIMENSION
+from config import MOVIE_PROFILE_VECTOR_DIMENSION
 from services.plot_encoding_service import get_plot_embeddings
 from services.genre_encoding_service import get_genre_vector
 from services.actor_encoding_service import get_cast_encoding, CLUSTER_VECTOR_SIZE
@@ -16,7 +16,7 @@ def create_movie_vector(movie):
         plot_embedding = get_plot_embeddings(plot_description)
         vectors.append(plot_embedding)
     else:
-        vectors.append(np.zeros(VECTOR_DIMENSION))
+        vectors.append(np.zeros(MOVIE_PROFILE_VECTOR_DIMENSION))
     
     # Genre Encoding 
     genres = movie.get('genres', [])

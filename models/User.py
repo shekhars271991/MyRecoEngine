@@ -1,6 +1,6 @@
 from services.redis_service import redis_client
 import numpy as np
-from config import VECTOR_DIMENSION, LEARNING_RATE
+from config import LEARNING_RATE, MOVIE_PROFILE_VECTOR_DIMENSION
 from models.Movie import Movie
 class User:
     def __init__(self, username):
@@ -78,6 +78,10 @@ class User:
         profile_vector = np.array(profile_vector)
         movie_vector = np.array(movie_vector)
 
+        # Ensure both vectors have the same shape
+        if profile_vector.shape != movie_vector.shape:
+            raise ValueError(f"Profile vector shape {profile_vector.shape} does not match movie vector shape {movie_vector.shape}")
+        
         # Update the profile vector based on the formula
         new_profile_vector = (1 - alpha) * profile_vector + alpha * weight_factor * movie_vector
 
@@ -98,7 +102,7 @@ class User:
             return self._create_default_profile()['feature_weights']
 
         total_weight = 0.0
-        cumulative_vector = np.zeros(len(profile['feature_weights']))
+        cumulative_vector = np.zeros(MOVIE_PROFILE_VECTOR_DIMENSION)
         for movie_id in watched_movie_ids:
             rating = ratings.get(movie_id, 3)  # Assume default rating of 3 if not rated
             weight_factor = rating / 5.0
@@ -120,7 +124,7 @@ class User:
         default_profile = {
             'watched': [],
             'ratings': {},
-            'feature_weights': [0.0] * VECTOR_DIMENSION  # Zero vector
+            'feature_weights': [0.0] * MOVIE_PROFILE_VECTOR_DIMENSION  # Zero vector
         }
         redis_client.json().set(self.profile_key, '.', default_profile)
         return default_profile

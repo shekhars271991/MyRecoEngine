@@ -1,7 +1,7 @@
 import json
 from services.redis_service import redis_client
 import numpy as np
-from config import VECTOR_DIMENSION, LEARNING_RATE
+from config import MOVIE_PROFILE_VECTOR_DIMENSION, LEARNING_RATE
 class Movie:
     @staticmethod
     def get_all_movies():
@@ -24,4 +24,4 @@ class Movie:
             return movie['embeddings']
         else:
             print(f"No embeddings found for movie_id {movie_id}")
-            return [0.0] * VECTOR_DIMENSION  # Replace with your actual embedding dimension
+            return [0.0] * MOVIE_PROFILE_VECTOR_DIMENSION  # Replace with your actual embedding dimension
