@@ -1,4 +1,4 @@
-from models import Movie
+from models.Movie import Movie
 from services.user_profiles import get_user_profile, update_user_profile
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np

@@ -1,7 +1,8 @@
 from flask import Blueprint, request, jsonify
 from services.auth import authenticate_user, register_user, login_required
 from services.recommender import get_recommendations
-from models import Movie, User
+from models.Movie import Movie
+from models.User import User
 import json
 from services.load_movies import load_movie_data 
 from services.redis_service import exists

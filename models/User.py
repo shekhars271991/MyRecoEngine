@@ -1,9 +1,7 @@
-# models.py
-
-import json
 from services.redis_service import redis_client
 import numpy as np
 from config import VECTOR_DIMENSION, LEARNING_RATE
+from models.Movie import Movie
 class User:
     def __init__(self, username):
         self.username = username
@@ -130,27 +128,3 @@ class User:
     def get_vector(self):
         profile = self.get_profile()
         return profile['feature_weights']
-
-class Movie:
-    @staticmethod
-    def get_all_movies():
-        keys = redis_client.keys("movie:*")
-        movies = []
-        for key in keys:
-            movie = redis_client.json().get(key)
-            movies.append(movie)
-        return movies
-
-    @staticmethod
-    def get_movie_vector(movie_id):
-        """
-        Fetch the movie's plot vector from Redis.
-        Assume the plot vector is stored as "movie:<id>:vector" in Redis.
-        """
-        movie_key = f"movie:{movie_id}"
-        movie = redis_client.json().get(movie_key)
-        if 'embeddings' in movie:
-            return movie['embeddings']
-        else:
-            print(f"No embeddings found for movie_id {movie_id}")
-            return [0.0] * VECTOR_DIMENSION  # Replace with your actual embedding dimension
