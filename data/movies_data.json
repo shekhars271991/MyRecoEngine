@@ -3,120 +3,140 @@
         "title": "The Godfather",
         "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
         "cast": ["Marlon Brando", "Al Pacino", "James Caan"],
-        "release_year": 1972
+        "release_year": 1972,
+        "genres": ["Crime", "Drama"]
     },
     {
         "title": "The Shawshank Redemption",
         "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
         "cast": ["Tim Robbins", "Morgan Freeman", "Bob Gunton"],
-        "release_year": 1994
+        "release_year": 1994,
+        "genres": ["Drama"]
     },
     {
         "title": "The Dark Knight",
         "description": "When the menace known as the Joker emerges, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
         "cast": ["Christian Bale", "Heath Ledger", "Aaron Eckhart"],
-        "release_year": 2008
+        "release_year": 2008,
+        "genres": ["Action", "Crime", "Drama"]
     },
     {
         "title": "Pulp Fiction",
         "description": "The lives of two mob hitmen, a boxer, a gangster, and his wife intertwine in four tales of violence and redemption.",
         "cast": ["John Travolta", "Uma Thurman", "Samuel L. Jackson"],
-        "release_year": 1994
+        "release_year": 1994,
+        "genres": ["Crime", "Drama"]
     },
     {
         "title": "Schindler's List",
         "description": "In German-occupied Poland during World War II, industrialist Oskar Schindler saves thousands of Jews from the Holocaust by employing them in his factories.",
         "cast": ["Liam Neeson", "Ralph Fiennes", "Ben Kingsley"],
-        "release_year": 1993
+        "release_year": 1993,
+        "genres": ["Biography", "Drama", "History"]
     },
     {
         "title": "Inception",
         "description": "A thief who enters the dreams of others to steal secrets must now plant an idea into someone's mind, a task that proves to be more difficult than expected.",
         "cast": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Elliot Page"],
-        "release_year": 2010
+        "release_year": 2010,
+        "genres": ["Action", "Adventure", "Sci-Fi"]
     },
     {
         "title": "Fight Club",
         "description": "An insomniac office worker and a devil-may-care soapmaker form an underground fight club that evolves into something far more dangerous.",
         "cast": ["Brad Pitt", "Edward Norton", "Helena Bonham Carter"],
-        "release_year": 1999
+        "release_year": 1999,
+        "genres": ["Drama", "Thriller"]
     },
     {
         "title": "Forrest Gump",
         "description": "The story of a slow-witted man who witnesses and unwittingly influences several historical events in the 20th century United States.",
         "cast": ["Tom Hanks", "Robin Wright", "Gary Sinise"],
-        "release_year": 1994
+        "release_year": 1994,
+        "genres": ["Drama", "Romance"]
     },
     {
         "title": "The Matrix",
         "description": "A computer hacker learns the shocking truth about reality and his role in the war against its controllers.",
         "cast": ["Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss"],
-        "release_year": 1999
+        "release_year": 1999,
+        "genres": ["Action", "Sci-Fi"]
     },
     {
         "title": "Star Wars: Episode IV - A New Hope",
         "description": "Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, and two droids to save the galaxy from the Empire's battle station.",
         "cast": ["Mark Hamill", "Harrison Ford", "Carrie Fisher"],
-        "release_year": 1977
+        "release_year": 1977,
+        "genres": ["Action", "Adventure", "Fantasy"]
     },
     {
         "title": "The Lord of the Rings: The Fellowship of the Ring",
         "description": "A meek Hobbit and eight companions set out on a journey to destroy the One Ring and save Middle-earth.",
         "cast": ["Elijah Wood", "Ian McKellen", "Viggo Mortensen"],
-        "release_year": 2001
+        "release_year": 2001,
+        "genres": ["Action", "Adventure", "Fantasy"]
     },
     {
         "title": "The Silence of the Lambs",
         "description": "A young FBI cadet must confide in an incarcerated and manipulative killer to catch another serial killer who skins his victims.",
         "cast": ["Jodie Foster", "Anthony Hopkins", "Scott Glenn"],
-        "release_year": 1991
+        "release_year": 1991,
+        "genres": ["Crime", "Drama", "Thriller"]
     },
     {
         "title": "Saving Private Ryan",
         "description": "After the Normandy invasion, a group of U.S. soldiers goes behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.",
         "cast": ["Tom Hanks", "Matt Damon", "Tom Sizemore"],
-        "release_year": 1998
+        "release_year": 1998,
+        "genres": ["Drama", "War"]
     },
     {
         "title": "Jurassic Park",
         "description": "During a preview tour, a theme park's genetically engineered dinosaurs run amok and endanger the lives of the park's visitors.",
         "cast": ["Sam Neill", "Laura Dern", "Jeff Goldblum"],
-        "release_year": 1993
+        "release_year": 1993,
+        "genres": ["Adventure", "Sci-Fi", "Thriller"]
     },
     {
         "title": "The Lion King",
         "description": "Lion prince Simba flees his kingdom after the murder of his father, only to learn the true meaning of responsibility and bravery.",
         "cast": ["Matthew Broderick", "Jeremy Irons", "James Earl Jones"],
-        "release_year": 1994
+        "release_year": 1994,
+        "genres": ["Animation", "Adventure", "Drama"]
     },
     {
         "title": "Gladiator",
         "description": "A former Roman General seeks vengeance against the corrupt emperor who murdered his family and sent him into slavery.",
         "cast": ["Russell Crowe", "Joaquin Phoenix", "Connie Nielsen"],
-        "release_year": 2000
+        "release_year": 2000,
+        "genres": ["Action", "Adventure", "Drama"]
     },
     {
         "title": "The Avengers",
         "description": "Earth's mightiest heroes must come together to stop a mischievous demigod from enslaving humanity.",
         "cast": ["Robert Downey Jr.", "Chris Evans", "Scarlett Johansson"],
-        "release_year": 2012
+        "release_year": 2012,
+        "genres": ["Action", "Adventure", "Sci-Fi"]
     },
     {
         "title": "The Terminator",
         "description": "A cyborg assassin is sent from the future to kill a young woman whose child will one day lead humanity's war against the machines.",
         "cast": ["Arnold Schwarzenegger", "Linda Hamilton", "Michael Biehn"],
-        "release_year": 1984
+        "release_year": 1984,
+        "genres": ["Action", "Sci-Fi", "Thriller"]
     },
     {
         "title": "Braveheart",
         "description": "Scottish warrior William Wallace leads his countrymen in a rebellion to free his homeland from the tyranny of King Edward I of England.",
         "cast": ["Mel Gibson", "Sophie Marceau", "Patrick McGoohan"],
-        "release_year": 1995
+        "release_year": 1995,
+        "genres": ["Biography", "Drama", "History"]
     },
     {
         "title": "Titanic",
         "description": "A young couple from different social classes falls in love aboard the ill-fated R.M.S. Titanic.",
         "cast": ["Leonardo DiCaprio", "Kate Winslet", "Billy Zane"],
-        "release_year": 1997
+        "release_year": 1997,
+        "genres": ["Drama", "Romance"]
     }
 ]

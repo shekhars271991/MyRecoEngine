@@ -3,8 +3,8 @@ from services.auth import authenticate_user, register_user, login_required
 from services.recommender import get_recommendations
 from models import Movie, User
 import json
-from redis_service import insert_movie, exists
-from services.embedding_service import get_embeddings
+from services.load_movies import load_movie_data 
+from services.redis_service import exists
 
 
 
@@ -76,16 +76,7 @@ def load_movies():
         
         # Insert each movie into Redis
         for movie in movies:
-            # Compute the embedding for the movie (assuming based on the description)
-            plot_description = movie.get('description', '')
-            if plot_description:
-                embedding = get_embeddings(plot_description)  # This function computes the movie embedding vector
-                # movie['embedding'] = embedding  # Add the embedding directly to the movie object
-            else:
-                print("error in embedding")
-            
-            # Insert the updated movie (with the embedding) into Redis
-            insert_movie(movie, embedding)   
+            load_movie_data(movie) 
         return jsonify({'message': f'{len(movies)} movies inserted into Redis successfully!'}), 200
     
     except FileNotFoundError:

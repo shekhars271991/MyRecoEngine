@@ -1,6 +1,6 @@
 import jwt
 from flask import request, jsonify
-from redis_service import redis_client
+from services.redis_service import redis_client
 from models import User
 from functools import wraps
 import bcrypt

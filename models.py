@@ -1,7 +1,7 @@
 # models.py
 
 import json
-from redis_service import redis_client
+from services.redis_service import redis_client
 import numpy as np
 from config import VECTOR_DIMENSION, LEARNING_RATE
 class User:
