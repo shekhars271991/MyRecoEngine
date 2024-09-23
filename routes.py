@@ -61,10 +61,44 @@ def movie_action(user: User):
     return jsonify({'message': 'Action updated successfully'}), 200
 
 # Get Recommendations Route
+# @main_routes.route('/movies/recommendations', methods=['GET'])
+# @login_required
+# def get_movie_recommendations(user):
+#     recommendations = get_recommendations(user)
+#     return jsonify(recommendations), 200
+
 @main_routes.route('/movies/recommendations', methods=['GET'])
 @login_required
 def get_movie_recommendations(user):
-    recommendations = get_recommendations(user)
+    # Extract query parameters
+    genres = request.args.get('genres')  # Could be a comma-separated string
+    min_year = request.args.get('min_year')
+    max_year = request.args.get('max_year')
+
+    # Process genres to a list if provided
+    if genres:
+        genres = [genre.strip() for genre in genres.split(',')]
+    else:
+        genres = None
+
+    # Convert min_year and max_year to integers if provided
+    try:
+        min_year = int(min_year) if min_year else None
+    except ValueError:
+        return jsonify({'error': 'Invalid min_year parameter'}), 400
+
+    try:
+        max_year = int(max_year) if max_year else None
+    except ValueError:
+        return jsonify({'error': 'Invalid max_year parameter'}), 400
+
+    # Get recommendations with filters
+    recommendations = get_recommendations(
+        user,
+        genres=genres,
+        min_year=min_year,
+        max_year=max_year
+    )
     return jsonify(recommendations), 200
 
 # New API to Load Movie Data from JSON File
