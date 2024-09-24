@@ -21,6 +21,8 @@ class Movie:
         movies = []
         for key in paginated_keys:
             movie = redis_client.json().get(key)
+            movie_id = key.decode("utf-8").split(":")[1]  # This extracts the part after "movie:"
+            movie['id'] = movie_id
             if 'embeddings' in movie:
                 movie.pop('embeddings')  # Remove embeddings
             movies.append(movie)
