@@ -51,9 +51,23 @@ def login():
 @main_routes.route('/movies', methods=['GET'])
 @login_required
 def get_movies(user):
-    movies = Movie.get_all_movies()
-    return jsonify(movies), 200
-    # return jsonify([movie.serialize() for movie in movies]), 200
+    # Get page and page_size from query parameters (with defaults)
+    page = int(request.args.get('page', 1))
+    page_size = int(request.args.get('page_size', 10))
+
+    # Get paginated movies and total count
+    movies, total_movies = Movie.get_all_movies(page, page_size)
+
+    # Build the response with pagination info
+    response = {
+        'movies': movies,
+        'page': page,
+        'page_size': page_size,
+        'total_movies': total_movies,
+        'total_pages': (total_movies + page_size - 1) // page_size  # Calculate total pages
+    }
+
+    return jsonify(response), 200
 
 # User Action: Watched/Not Watched, Rating Route
 @main_routes.route('/movies/action', methods=['POST'])
