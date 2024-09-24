@@ -40,7 +40,7 @@ def insert_movie(movie, movie_vector):
     :param movie_vector: Numpy array representing the movie vector
     """
     # Generate the Redis key in the format 'movie:movie_title', with spaces replaced by underscores
-    movie_title = movie.get('title', 'unknown_title').lower().replace(' ', '_')
+    movie_title = movie.get('title', 'unknown_title').lower().replace(' ', '_').replace(':','_')
     movie_key = f"movie:{movie_title}"
 
     # Check if the movie already exists in Redis

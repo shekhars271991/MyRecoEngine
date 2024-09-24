@@ -29,7 +29,7 @@ def register():
         return jsonify({'message': 'Invalid username format'}), 400
 
     # Validate password length
-    if len(password) < 6:
+    if len(password) < 4:
         return jsonify({'message': 'Password must be at least 6 characters long'}), 400
 
     if register_user(name, username, password):
@@ -54,9 +54,12 @@ def get_movies(user):
     # Get page and page_size from query parameters (with defaults)
     page = int(request.args.get('page', 1))
     page_size = int(request.args.get('page_size', 10))
+    
+    # Get the status query param (could be "seen", "not_seen", or "new")
+    status = request.args.get('status', None)
 
-    # Get paginated movies and total count
-    movies, total_movies = Movie.get_all_movies(page, page_size)
+    # Get paginated movies and total count, with the status filter
+    movies, total_movies = Movie.get_all_movies(user, page, page_size, status)
 
     # Build the response with pagination info
     response = {
