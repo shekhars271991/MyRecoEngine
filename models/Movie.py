@@ -2,9 +2,9 @@ import json
 from services.redis_service import redis_client
 import numpy as np
 from config import MOVIE_PROFILE_VECTOR_DIMENSION, LEARNING_RATE
+
 class Movie:
     @staticmethod
-    
     def get_all_movies(user, page, page_size, status=None):
         """
         Fetch all movies without embeddings and categorize them into seen, not seen, and new.
@@ -20,21 +20,14 @@ class Movie:
         ratings = profile.get('ratings', {})
         not_watched_movies = profile.get('not_watched', [])
 
-        # Pagination logic
-        total_movies = len(keys)
-        start = (page - 1) * page_size
-        end = start + page_size
-
-        # Ensure page boundaries are within the range
-        paginated_keys = keys[start:end]
-        
         seen_movies = []
         not_seen_movies = []
         new_movies = []
 
-        for key in paginated_keys:
+        # Categorize movies into seen, not seen, and new
+        for key in keys:
             movie = redis_client.json().get(key)
-            movie_id = key.decode("utf-8").split(":")[1]  # This extracts the part after "movie:"
+            movie_id = key.decode("utf-8")  # Decode the key to get the movie ID
             movie['id'] = movie_id
 
             if 'embeddings' in movie:
@@ -49,23 +42,24 @@ class Movie:
             else:
                 new_movies.append(movie)
 
-        # Filter based on status query param
+        # Filter movies based on the status query param
         if status == 'seen':
-            movies = seen_movies
+            filtered_movies = seen_movies
         elif status == 'not_seen':
-            movies = not_seen_movies
+            filtered_movies = not_seen_movies
         elif status == 'new':
-            movies = new_movies
+            filtered_movies = new_movies
         else:
-            # Return all movies, categorized by seen, not_seen, and new
-            movies = {
-                'seen': seen_movies,
-                'not_seen': not_seen_movies,
-                'new': new_movies
-            }
+            # If no status is provided, return all categories
+            filtered_movies = seen_movies + not_seen_movies + new_movies
 
-        return movies, total_movies
+        # Apply pagination to the filtered movies
+        total_movies = len(filtered_movies)
+        start = (page - 1) * page_size
+        end = start + page_size
+        paginated_movies = filtered_movies[start:end]
 
+        return paginated_movies, total_movies
 
     @staticmethod
     def get_movie_vector(movie_id):
@@ -73,10 +67,10 @@ class Movie:
         Fetch the movie's plot vector from Redis.
         Assume the plot vector is stored as "movie:<id>:vector" in Redis.
         """
-        movie_key = f"movie:{movie_id}"
+        movie_key = f"{movie_id}"
         movie = redis_client.json().get(movie_key)
         if 'embeddings' in movie:
             return movie['embeddings']
         else:
             print(f"No embeddings found for movie_id {movie_id}")
-            return [0.0] * MOVIE_PROFILE_VECTOR_DIMENSION 
+            return [0.0] * MOVIE_PROFILE_VECTOR_DIMENSION

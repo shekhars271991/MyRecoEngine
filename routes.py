@@ -80,8 +80,8 @@ def movie_action(user: User):
     watched = request.json.get('watched')
     rating = request.json.get('rating', None)
     # user_instance = User(username=user)
-    movie_key = f"movie:{movie_id}"
-    movie_exists = exists(movie_key)
+   
+    movie_exists = exists(movie_id)
 
     if not movie_exists:
         return jsonify({'message': 'Movie not found.'}), 404
