@@ -126,7 +126,7 @@ def search_movies_by_vector_with_filters(query_vector, genres=None, min_year=Non
         vq = VectorQuery(
             vector=vector,
             vector_field_name="embeddings",
-            return_fields=["release_year", "genres", "vector_score"],
+            # return_fields=["release_year", "genres", "vector_score"],
             filter_expression=filter_expression,
             num_results=num_results
         )

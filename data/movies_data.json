@@ -138,5 +138,929 @@
         "cast": ["Leonardo DiCaprio", "Kate Winslet", "Billy Zane"],
         "release_year": 1997,
         "genres": ["Drama", "Romance"]
+    },
+    {
+        "title": "Interstellar",
+        "description": "A group of astronauts travels through a wormhole in search of a new habitable planet.",
+        "cast": ["Matthew McConaughey", "Anne Hathaway", "Jessica Chastain"],
+        "release_year": 2014,
+        "genres": ["Adventure", "Drama", "Sci-Fi"]
+    },
+    {
+        "title": "The Prestige",
+        "description": "Two stage magicians engage in a rivalry to create the ultimate stage illusion, with dangerous consequences.",
+        "cast": ["Christian Bale", "Hugh Jackman", "Scarlett Johansson"],
+        "release_year": 2006,
+        "genres": ["Drama", "Mystery", "Thriller"]
+    },
+    {
+        "title": "Mad Max: Fury Road",
+        "description": "In a post-apocalyptic wasteland, a woman rebels against a tyrant and his army in a high-octane road chase.",
+        "cast": ["Tom Hardy", "Charlize Theron", "Nicholas Hoult"],
+        "release_year": 2015,
+        "genres": ["Action", "Adventure", "Sci-Fi"]
+    },
+    {
+        "title": "Django Unchained",
+        "description": "With the help of a German bounty hunter, a freed slave sets out to rescue his wife from a brutal Mississippi plantation owner.",
+        "cast": ["Jamie Foxx", "Christoph Waltz", "Leonardo DiCaprio"],
+        "release_year": 2012,
+        "genres": ["Drama", "Western"]
+    },
+    {
+        "title": "The Wolf of Wall Street",
+        "description": "The story of Jordan Belfort, from his rise to a wealthy stockbroker to his fall involving crime, corruption, and the federal government.",
+        "cast": ["Leonardo DiCaprio", "Jonah Hill", "Margot Robbie"],
+        "release_year": 2013,
+        "genres": ["Biography", "Comedy", "Crime"]
+    },
+    {
+        "title": "Inglourious Basterds",
+        "description": "In Nazi-occupied France during World War II, a group of Jewish-American soldiers plan to assassinate Nazi leaders.",
+        "cast": ["Brad Pitt", "Diane Kruger", "Eli Roth"],
+        "release_year": 2009,
+        "genres": ["Adventure", "Drama", "War"]
+    },
+    {
+        "title": "Whiplash",
+        "description": "A promising young drummer enrolls at a music conservatory where he is pushed to the limit by an instructor who will stop at nothing to realize a student's potential.",
+        "cast": ["Miles Teller", "J.K. Simmons", "Paul Reiser"],
+        "release_year": 2014,
+        "genres": ["Drama", "Music"]
+    },
+    {
+        "title": "The Social Network",
+        "description": "The story of the founders of the social-networking website, Facebook.",
+        "cast": ["Jesse Eisenberg", "Andrew Garfield", "Justin Timberlake"],
+        "release_year": 2010,
+        "genres": ["Biography", "Drama"]
+    },
+    {
+        "title": "Parasite",
+        "description": "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.",
+        "cast": ["Kang-ho Song", "Sun-kyun Lee", "Yeo-jeong Cho"],
+        "release_year": 2019,
+        "genres": ["Comedy", "Drama", "Thriller"]
+    },
+    {
+        "title": "12 Years a Slave",
+        "description": "In the pre-Civil War United States, Solomon Northup, a free black man from upstate New York, is abducted and sold into slavery.",
+        "cast": ["Chiwetel Ejiofor", "Michael Kenneth Williams", "Michael Fassbender"],
+        "release_year": 2013,
+        "genres": ["Biography", "Drama", "History"]
+    },
+    {
+        "title": "The Revenant",
+        "description": "A frontiersman on a fur trading expedition in the 1820s fights for survival after being mauled by a bear and left for dead by members of his own hunting team.",
+        "cast": ["Leonardo DiCaprio", "Tom Hardy", "Will Poulter"],
+        "release_year": 2015,
+        "genres": ["Action", "Adventure", "Drama"]
+    },
+    {
+        "title": "Gone Girl",
+        "description": "With his wife's disappearance having become the focus of an intense media circus, a man sees the spotlight turned on him when it's suspected that he may not be innocent.",
+        "cast": ["Ben Affleck", "Rosamund Pike", "Neil Patrick Harris"],
+        "release_year": 2014,
+        "genres": ["Drama", "Mystery", "Thriller"]
+    },
+    {
+        "title": "Her",
+        "description": "In a near future, a lonely writer develops an unlikely relationship with an operating system designed to meet his every need.",
+        "cast": ["Joaquin Phoenix", "Amy Adams", "Scarlett Johansson"],
+        "release_year": 2013,
+        "genres": ["Drama", "Romance", "Sci-Fi"]
+    },
+    {
+        "title": "La La Land",
+        "description": "While navigating their careers in Los Angeles, a pianist and an actress fall in love while attempting to reconcile their aspirations for the future.",
+        "cast": ["Ryan Gosling", "Emma Stone", "Rosemarie DeWitt"],
+        "release_year": 2016,
+        "genres": ["Comedy", "Drama", "Music"]
+    },
+    {
+        "title": "The Grand Budapest Hotel",
+        "description": "A writer encounters the owner of an aging high-class hotel, who tells him of his early years serving as a lobby boy in the hotel's glorious years under an exceptional concierge.",
+        "cast": ["Ralph Fiennes", "F. Murray Abraham", "Mathieu Amalric"],
+        "release_year": 2014,
+        "genres": ["Adventure", "Comedy", "Crime"]
+    },
+    {
+        "title": "Gravity",
+        "description": "Two astronauts work together to survive after an accident leaves them stranded in space.",
+        "cast": ["Sandra Bullock", "George Clooney", "Ed Harris"],
+        "release_year": 2013,
+        "genres": ["Drama", "Sci-Fi", "Thriller"]
+    },
+    {
+        "title": "Blade Runner 2049",
+        "description": "Young blade runner K's discovery of a long-buried secret leads him to track down former blade runner Rick Deckard, who's been missing for thirty years.",
+        "cast": ["Ryan Gosling", "Harrison Ford", "Ana de Armas"],
+        "release_year": 2017,
+        "genres": ["Action", "Drama", "Sci-Fi"]
+    },
+    {
+        "title": "Shutter Island",
+        "description": "In 1954, a U.S. Marshal investigates the disappearance of a murderer who escaped from a hospital for the criminally insane.",
+        "cast": ["Leonardo DiCaprio", "Emily Mortimer", "Mark Ruffalo"],
+        "release_year": 2010,
+        "genres": ["Mystery", "Thriller"]
+    },
+    {
+        "title": "Arrival",
+        "description": "A linguist works with the military to communicate with alien lifeforms after twelve mysterious spacecraft appear around the world.",
+        "cast": ["Amy Adams", "Jeremy Renner", "Forest Whitaker"],
+        "release_year": 2016,
+        "genres": ["Drama", "Mystery", "Sci-Fi"]
+    },
+    {
+        "title": "Get Out",
+        "description": "A young African-American visits his white girlfriend's parents for the weekend, where his simmering uneasiness about their reception of him eventually reaches a boiling point.",
+        "cast": ["Daniel Kaluuya", "Allison Williams", "Bradley Whitford"],
+        "release_year": 2017,
+        "genres": ["Horror", "Mystery", "Thriller"]
+    },
+    {
+        "title": "A Quiet Place",
+        "description": "In a post-apocalyptic world, a family is forced to live in silence while hiding from monsters with ultra-sensitive hearing.",
+        "cast": ["Emily Blunt", "John Krasinski", "Millicent Simmonds"],
+        "release_year": 2018,
+        "genres": ["Drama", "Horror", "Sci-Fi"]
+    },
+    {
+        "title": "The Hateful Eight",
+        "description": "In the dead of a Wyoming winter, bounty hunters seek shelter in a cabin, but the situation soon becomes hostile.",
+        "cast": ["Samuel L. Jackson", "Kurt Russell", "Jennifer Jason Leigh"],
+        "release_year": 2015,
+        "genres": ["Crime", "Drama", "Mystery"]
+    },
+    {
+        "title": "Moonlight",
+        "description": "A young African-American man grapples with his identity and sexuality while experiencing the everyday struggles of childhood, adolescence, and burgeoning adulthood.",
+        "cast": ["Mahershala Ali", "Naomie Harris", "Trevante Rhodes"],
+        "release_year": 2016,
+        "genres": ["Drama"]
+    },
+    {
+        "title": "The Shape of Water",
+        "description": "At a top-secret research facility, a lonely janitor forms a unique relationship with an amphibious creature that is being held in captivity.",
+        "cast": ["Sally Hawkins", "Octavia Spencer", "Michael Shannon"],
+        "release_year": 2017,
+        "genres": ["Drama", "Fantasy", "Romance"]
+    },
+    {
+        "title": "Birdman",
+        "description": "A washed-up superhero actor attempts to revive his fading career by writing, directing, and starring in a Broadway production.",
+        "cast": ["Michael Keaton", "Zach Galifianakis", "Edward Norton"],
+        "release_year": 2014,
+        "genres": ["Comedy", "Drama"]
+    },
+    {
+        "title": "Logan",
+        "description": "In a dystopian future, Logan and an ailing Professor X defend a young mutant pursued by dark forces.",
+        "cast": ["Hugh Jackman", "Patrick Stewart", "Dafne Keen"],
+        "release_year": 2017,
+        "genres": ["Action", "Drama", "Sci-Fi"]
+    },
+    {
+        "title": "Lady Bird",
+        "description": "In 2002, an artistically inclined seventeen-year-old girl comes of age in Sacramento, California.",
+        "cast": ["Saoirse Ronan", "Laurie Metcalf", "Tracy Letts"],
+        "release_year": 2017,
+        "genres": ["Comedy", "Drama"]
+    },
+    {
+        "title": "Jojo Rabbit",
+        "description": "A young boy in Hitler's army finds out his mother is hiding a Jewish girl in their home.",
+        "cast": ["Roman Griffin Davis", "Thomasin McKenzie", "Scarlett Johansson"],
+        "release_year": 2019,
+        "genres": ["Comedy", "Drama", "War"]
+    },
+    {
+        "title": "1917",
+        "description": "Two young British soldiers during World War I are given an impossible mission: deliver a message deep in enemy territory.",
+        "cast": ["George MacKay", "Dean-Charles Chapman", "Mark Strong"],
+        "release_year": 2019,
+        "genres": ["Drama", "War"]
+    },
+    {
+        "title": "Joker",
+        "description": "In Gotham City's fractured society, mentally troubled comedian Arthur Fleck embarks on a downward spiral, transforming into the infamous criminal known as the Joker.",
+        "cast": ["Joaquin Phoenix", "Robert De Niro", "Zazie Beetz"],
+        "release_year": 2019,
+        "genres": ["Crime", "Drama", "Thriller"]
+    },
+    {
+        "title": "Once Upon a Time in Hollywood",
+        "description": "A faded television actor and his stunt double strive to achieve fame and success in the final years of Hollywood's Golden Age.",
+        "cast": ["Leonardo DiCaprio", "Brad Pitt", "Margot Robbie"],
+        "release_year": 2019,
+        "genres": ["Comedy", "Drama"]
+    },
+    {
+        "title": "Black Panther",
+        "description": "T'Challa, heir to the hidden but advanced kingdom of Wakanda, must step forward to lead his people and face a powerful enemy.",
+        "cast": ["Chadwick Boseman", "Michael B. Jordan", "Lupita Nyong'o"],
+        "release_year": 2018,
+        "genres": ["Action", "Adventure", "Sci-Fi"]
+    },
+    {
+        "title": "Spider-Man: Into the Spider-Verse",
+        "description": "Teen Miles Morales becomes the Spider-Man of his reality and crosses paths with five counterparts from other dimensions.",
+        "cast": ["Shameik Moore", "Jake Johnson", "Hailee Steinfeld"],
+        "release_year": 2018,
+        "genres": ["Animation", "Action", "Adventure"]
+    },
+    {
+        "title": "The Irishman",
+        "description": "A mob hitman recalls his involvement with the rise of the American mafia and the disappearance of Jimmy Hoffa.",
+        "cast": ["Robert De Niro", "Al Pacino", "Joe Pesci"],
+        "release_year": 2019,
+        "genres": ["Biography", "Crime", "Drama"]
+    },
+    {
+        "title": "A Star Is Born",
+        "description": "A musician helps a young singer find fame as age and alcoholism send his own career into a downward spiral.",
+        "cast": ["Bradley Cooper", "Lady Gaga", "Sam Elliott"],
+        "release_year": 2018,
+        "genres": ["Drama", "Music", "Romance"]
+    },
+    {
+        "title": "Knives Out",
+        "description": "A detective investigates the death of a wealthy patriarch and unravels a web of secrets within the family.",
+        "cast": ["Daniel Craig", "Chris Evans", "Ana de Armas"],
+        "release_year": 2019,
+        "genres": ["Comedy", "Crime", "Drama"]
+    },
+    {
+        "title": "Marriage Story",
+        "description": "An incisive and compassionate look at a marriage breaking up and a family staying together.",
+        "cast": ["Scarlett Johansson", "Adam Driver", "Laura Dern"],
+        "release_year": 2019,
+        "genres": ["Drama", "Romance"]
+    },
+    {
+        "title": "Ford v Ferrari",
+        "description": "American car designer Carroll Shelby and driver Ken Miles battle corporate interference and the laws of physics to build a revolutionary race car for Ford.",
+        "cast": ["Matt Damon", "Christian Bale", "Jon Bernthal"],
+        "release_year": 2019,
+        "genres": ["Action", "Biography", "Drama"]
+    },
+    {
+        "title": "Dune",
+        "description": "The son of a noble family is entrusted with the protection of the most valuable asset and the most vital element in the galaxy.",
+        "cast": ["Timothée Chalamet", "Rebecca Ferguson", "Oscar Isaac"],
+        "release_year": 2021,
+        "genres": ["Action", "Adventure", "Drama"]
+    },
+    {
+        "title": "Tenet",
+        "description": "Armed with only one word, Tenet, a protagonist embarks on a time-bending mission to prevent the collapse of the world.",
+        "cast": ["John David Washington", "Robert Pattinson", "Elizabeth Debicki"],
+        "release_year": 2020,
+        "genres": ["Action", "Sci-Fi", "Thriller"]
+    },
+    {
+        "title": "Soul",
+        "description": "A jazz musician gets stuck in the afterlife and embarks on a journey to return to his body and fulfill his life goals.",
+        "cast": ["Jamie Foxx", "Tina Fey", "Graham Norton"],
+        "release_year": 2020,
+        "genres": ["Animation", "Adventure", "Comedy"]
+    },
+    {
+        "title": "Nomadland",
+        "description": "A woman in her sixties embarks on a journey through the American West, living as a van-dwelling modern-day nomad.",
+        "cast": ["Frances McDormand", "David Strathairn", "Linda May"],
+        "release_year": 2020,
+        "genres": ["Drama"]
+    },
+    {
+        "title": "Minari",
+        "description": "A Korean family starts a farm in 1980s Arkansas, where they experience challenges in pursuit of their own American dream.",
+        "cast": ["Steven Yeun", "Yeri Han", "Alan S. Kim"],
+        "release_year": 2020,
+        "genres": ["Drama"]
+    },
+    {
+        "title": "Promising Young Woman",
+        "description": "A young woman, traumatized by a tragic event in her past, seeks out vengeance against those who wronged her.",
+        "cast": ["Carey Mulligan", "Bo Burnham", "Alison Brie"],
+        "release_year": 2020,
+        "genres": ["Crime", "Drama", "Thriller"]
+    },
+    {
+        "title": "The Father",
+        "description": "A man refuses all assistance from his daughter as he ages, and begins to doubt his own perception of reality.",
+        "cast": ["Anthony Hopkins", "Olivia Colman", "Mark Gatiss"],
+        "release_year": 2020,
+        "genres": ["Drama"]
+    },
+    {
+        "title": "The Trial of the Chicago 7",
+        "description": "The story of seven individuals on trial stemming from various charges surrounding the uprising at the 1968 Democratic National Convention in Chicago.",
+        "cast": ["Eddie Redmayne", "Sacha Baron Cohen", "Joseph Gordon-Levitt"],
+        "release_year": 2020,
+        "genres": ["Drama", "History", "Thriller"]
+    },
+    {
+        "title": "Sound of Metal",
+        "description": "A heavy-metal drummer's life is turned upside down when he begins to lose his hearing.",
+        "cast": ["Riz Ahmed", "Olivia Cooke", "Paul Raci"],
+        "release_year": 2019,
+        "genres": ["Drama", "Music"]
+    },
+    {
+        "title": "The Green Knight",
+        "description": "King Arthur's headstrong nephew embarks on a daring quest to confront the Green Knight, a mysterious giant.",
+        "cast": ["Dev Patel", "Alicia Vikander", "Joel Edgerton"],
+        "release_year": 2021,
+        "genres": ["Adventure", "Drama", "Fantasy"]
+    },
+    {
+        "title": "Don't Look Up",
+        "description": "Two low-level astronomers must go on a giant media tour to warn mankind of an approaching comet that will destroy Earth.",
+        "cast": ["Leonardo DiCaprio", "Jennifer Lawrence", "Meryl Streep"],
+        "release_year": 2021,
+        "genres": ["Comedy", "Drama", "Sci-Fi"]
+    },
+    {
+        "title": "The French Dispatch",
+        "description": "A love letter to journalists set in an outpost of an American newspaper in a fictional 20th-century French city.",
+        "cast": ["Benicio Del Toro", "Adrien Brody", "Tilda Swinton"],
+        "release_year": 2021,
+        "genres": ["Comedy", "Drama", "Romance"]
+    },
+    {
+        "title": "No Time to Die",
+        "description": "James Bond has left active service. His peace is short-lived when an old friend from the CIA turns up asking for help.",
+        "cast": ["Daniel Craig", "Rami Malek", "Léa Seydoux"],
+        "release_year": 2021,
+        "genres": ["Action", "Adventure", "Thriller"]
+    },
+    {
+        "title": "Eternals",
+        "description": "A group of ancient heroes must come together to protect humanity from their oldest enemy, the Deviants.",
+        "cast": ["Gemma Chan", "Richard Madden", "Angelina Jolie"],
+        "release_year": 2021,
+        "genres": ["Action", "Adventure", "Fantasy"]
+    },
+    {
+        "title": "Shang-Chi and the Legend of the Ten Rings",
+        "description": "Shang-Chi, the master of unarmed weaponry-based Kung Fu, is forced to confront his past after being drawn into the Ten Rings organization.",
+        "cast": ["Simu Liu", "Awkwafina", "Tony Leung"],
+        "release_year": 2021,
+        "genres": ["Action", "Adventure", "Fantasy"]
+    },
+    {
+        "title": "Luca",
+        "description": "On the Italian Riviera, an unlikely but strong friendship grows between a human and a sea monster disguised as a human.",
+        "cast": ["Jacob Tremblay", "Jack Dylan Grazer", "Emma Berman"],
+        "release_year": 2021,
+        "genres": ["Animation", "Adventure", "Comedy"]
+    },
+    {
+        "title": "Encanto",
+        "description": "A Colombian teenage girl has to face the frustration of being the only member of her family without magical powers.",
+        "cast": ["Stephanie Beatriz", "María Cecilia Botero", "John Leguizamo"],
+        "release_year": 2021,
+        "genres": ["Animation", "Comedy", "Drama"]
+    },
+    {
+        "title": "The Suicide Squad",
+        "description": "Supervillains Harley Quinn, Bloodsport, Peacemaker, and a collection of nutty cons at Belle Reve prison join the super-secret, super-shady Task Force X.",
+        "cast": ["Margot Robbie", "Idris Elba", "John Cena"],
+        "release_year": 2021,
+        "genres": ["Action", "Adventure", "Comedy"]
+    },
+    {
+        "title": "King Richard",
+        "description": "A look at how tennis superstars Venus and Serena Williams became who they are after the coaching from their father, Richard Williams.",
+        "cast": ["Will Smith", "Aunjanue Ellis", "Jon Bernthal"],
+        "release_year": 2021,
+        "genres": ["Biography", "Drama", "Sport"]
+    },
+    {
+        "title": "Spencer",
+        "description": "During her Christmas holidays with the royal family at the Sandringham estate in Norfolk, England, Princess Diana decides to leave her marriage to Prince Charles.",
+        "cast": ["Kristen Stewart", "Timothy Spall", "Jack Farthing"],
+        "release_year": 2021,
+        "genres": ["Biography", "Drama"]
+    },
+    {
+        "title": "The Power of the Dog",
+        "description": "Charismatic rancher Phil Burbank inspires fear and awe in those around him. When his brother brings home a new wife and her son, Phil torments them until he finds himself exposed to the possibility of love.",
+        "cast": ["Benedict Cumberbatch", "Kirsten Dunst", "Jesse Plemons"],
+        "release_year": 2021,
+        "genres": ["Drama", "Western"]
+    },
+    {
+        "title": "West Side Story",
+        "description": "An adaptation of the 1957 musical, West Side Story explores forbidden love and the rivalry between the Jets and the Sharks, two teenage street gangs of different ethnic backgrounds.",
+        "cast": ["Ansel Elgort", "Rachel Zegler", "Ariana DeBose"],
+        "release_year": 2021,
+        "genres": ["Crime", "Drama", "Musical"]
+    },
+    {
+        "title": "Nightmare Alley",
+        "description": "An ambitious carny with a talent for manipulating people meets a female psychiatrist who is even more dangerous than he is.",
+        "cast": ["Bradley Cooper", "Cate Blanchett", "Toni Collette"],
+        "release_year": 2021,
+        "genres": ["Crime", "Drama", "Thriller"]
+    },
+    {
+        "title": "CODA",
+        "description": "As a CODA (Child of Deaf Adults) Ruby is the only hearing person in her deaf family. When the family's fishing business is threatened, Ruby must choose between pursuing her love of music and her obligations to her family.",
+        "cast": ["Emilia Jones", "Marlee Matlin", "Troy Kotsur"],
+        "release_year": 2021,
+        "genres": ["Drama", "Music"]
+    },
+    {
+        "title": "Belfast",
+        "description": "A young boy and his working-class Belfast family experience the tumultuous late 1960s.",
+        "cast": ["Jude Hill", "Lewis McAskie", "Caitríona Balfe"],
+        "release_year": 2021,
+        "genres": ["Biography", "Drama"]
+    },
+    {
+        "title": "The Lost Daughter",
+        "description": "A woman's quiet seaside vacation takes an unsettling turn when her fixation on a young mother staying at a nearby villa awakens memories from her past.",
+        "cast": ["Olivia Colman", "Jessie Buckley", "Dakota Johnson"],
+        "release_year": 2021,
+        "genres": ["Drama"]
+    },
+    {
+        "title": "House of Gucci",
+        "description": "When Patrizia Reggiani, an outsider from humble beginnings, marries into the Gucci family, her ambition begins to unravel the family's legacy and triggers a spiral of betrayal, decadence, and murder.",
+        "cast": ["Lady Gaga", "Adam Driver", "Al Pacino"],
+        "release_year": 2021,
+        "genres": ["Biography", "Crime", "Drama"]
+    },
+    {
+        "title": "Tick, Tick... Boom!",
+        "description": "On the cusp of his 30th birthday, a promising young theater composer navigates love, friendship, and the pressure to create something great before time runs out.",
+        "cast": ["Andrew Garfield", "Alexandra Shipp", "Robin de Jesús"],
+        "release_year": 2021,
+        "genres": ["Biography", "Drama", "Musical"]
+    },
+    {
+        "title": "Drive My Car",
+        "description": "After his wife's unexpected death, a renowned stage actor and director grapples with loss and takes on a new play while slowly finding solace with his chauffeur.",
+        "cast": ["Hidetoshi Nishijima", "Tôko Miura", "Reika Kirishima"],
+        "release_year": 2021,
+        "genres": ["Drama"]
+    },
+    {
+        "title": "Don't Breathe",
+        "description": "Hoping to walk away with a massive fortune, a trio of thieves break into the house of a blind man who isn't as helpless as he seems.",
+        "cast": ["Stephen Lang", "Jane Levy", "Dylan Minnette"],
+        "release_year": 2016,
+        "genres": ["Crime", "Horror", "Thriller"]
+    },
+    {
+        "title": "A Beautiful Day in the Neighborhood",
+        "description": "Based on the true story of a real-life friendship between Fred Rogers and journalist Tom Junod.",
+        "cast": ["Tom Hanks", "Matthew Rhys", "Chris Cooper"],
+        "release_year": 2019,
+        "genres": ["Biography", "Drama"]
+    },
+    {
+        "title": "Portrait of a Lady on Fire",
+        "description": "On an isolated island in Brittany at the end of the 18th century, a female painter is obliged to paint a wedding portrait of a young woman.",
+        "cast": ["Noémie Merlant", "Adèle Haenel", "Luàna Bajrami"],
+        "release_year": 2019,
+        "genres": ["Drama", "Romance"]
+    },
+    {
+        "title": "Parasite",
+        "description": "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.",
+        "cast": ["Kang-ho Song", "Sun-kyun Lee", "Yeo-jeong Cho"],
+        "release_year": 2019,
+        "genres": ["Comedy", "Drama", "Thriller"]
+    },
+    {
+        "title": "Midsommar",
+        "description": "A couple travels to Sweden to visit a rural hometown's fabled mid-summer festival, only to find themselves in the clutches of a sinister cult.",
+        "cast": ["Florence Pugh", "Jack Reynor", "Vilhelm Blomgren"],
+        "release_year": 2019,
+        "genres": ["Drama", "Horror", "Mystery"]
+    },
+    {
+        "title": "The Lighthouse",
+        "description": "Two lighthouse keepers try to maintain their sanity while living on a remote and mysterious New England island in the 1890s.",
+        "cast": ["Robert Pattinson", "Willem Dafoe", "Valeriia Karaman"],
+        "release_year": 2019,
+        "genres": ["Drama", "Fantasy", "Horror"]
+    },
+    {
+        "title": "Jojo Rabbit",
+        "description": "A young boy in Hitler's army finds out his mother is hiding a Jewish girl in their home.",
+        "cast": ["Roman Griffin Davis", "Thomasin McKenzie", "Scarlett Johansson"],
+        "release_year": 2019,
+        "genres": ["Comedy", "Drama", "War"]
+    },
+    {
+        "title": "Marriage Story",
+        "description": "Noah Baumbach's incisive and compassionate look at a marriage breaking up and a family staying together.",
+        "cast": ["Adam Driver", "Scarlett Johansson", "Julia Greer"],
+        "release_year": 2019,
+        "genres": ["Drama", "Romance"]
+    },
+    {
+        "title": "Uncut Gems",
+        "description": "With his debts mounting and angry collectors closing in, a fast-talking New York City jeweler risks everything in hopes of staying afloat and alive.",
+        "cast": ["Adam Sandler", "Julia Fox", "Idina Menzel"],
+        "release_year": 2019,
+        "genres": ["Crime", "Drama", "Thriller"]
+    },
+    {
+        "title": "The Farewell",
+        "description": "A Chinese family discovers their grandmother has only a short while left to live and decide to keep her in the dark, scheduling a wedding to gather before she dies.",
+        "cast": ["Shuzhen Zhao", "Awkwafina", "X Mayo"],
+        "release_year": 2019,
+        "genres": ["Comedy", "Drama"]
+    },
+    {
+        "title": "Once Upon a Time in Hollywood",
+        "description": "A faded television actor and his stunt double strive to achieve fame and success in the final years of Hollywood's Golden Age.",
+        "cast": ["Leonardo DiCaprio", "Brad Pitt", "Margot Robbie"],
+        "release_year": 2019,
+        "genres": ["Comedy", "Drama"]
+    },
+    {
+        "title": "The King",
+        "description": "Hal, wayward prince and heir to the English throne, is crowned King Henry V after his tyrannical father dies.",
+        "cast": ["Tom Glynn-Carney", "Gábor Czap", "Tom Fisher"],
+        "release_year": 2019,
+        "genres": ["Biography", "Drama", "History"]
+    },
+    {
+        "title": "Ford v Ferrari",
+        "description": "American car designer Carroll Shelby and driver Ken Miles battle corporate interference and the laws of physics to build a revolutionary race car for Ford.",
+        "cast": ["Matt Damon", "Christian Bale", "Jon Bernthal"],
+        "release_year": 2019,
+        "genres": ["Action", "Biography", "Drama"]
+    },
+    {
+        "title": "Dunkirk",
+        "description": "Allied soldiers from Belgium, the British Empire, and France are surrounded by the German Army and evacuated during a fierce battle in World War II.",
+        "cast": ["Fionn Whitehead", "Barry Keoghan", "Mark Rylance"],
+        "release_year": 2017,
+        "genres": ["Action", "Drama", "History"]
+    },
+    {
+        "title": "First Man",
+        "description": "A look at the life of the astronaut, Neil Armstrong, and the legendary space mission that led him to become the first man to walk on the Moon on July 20, 1969.",
+        "cast": ["Ryan Gosling", "Claire Foy", "Jason Clarke"],
+        "release_year": 2018,
+        "genres": ["Biography", "Drama", "History"]
+    },
+    {
+        "title": "A Star Is Born",
+        "description": "A musician helps a young singer find fame as age and alcoholism send his own career into a downward spiral.",
+        "cast": ["Lady Gaga", "Bradley Cooper", "Sam Elliott"],
+        "release_year": 2018,
+        "genres": ["Drama", "Music", "Romance"]
+    },
+    {
+        "title": "Bohemian Rhapsody",
+        "description": "The story of the legendary rock band Queen and lead singer Freddie Mercury, leading up to their famous performance at Live Aid.",
+        "cast": ["Rami Malek", "Lucy Boynton", "Gwilym Lee"],
+        "release_year": 2018,
+        "genres": ["Biography", "Drama", "Music"]
+    },
+    {
+        "title": "Vice",
+        "description": "The story of Dick Cheney, an unassuming bureaucratic Washington insider, who quietly wielded immense power as Vice President to George W. Bush, reshaping the country and the globe in ways still felt today.",
+        "cast": ["Christian Bale", "Amy Adams", "Steve Carell"],
+        "release_year": 2018,
+        "genres": ["Biography", "Comedy", "Drama"]
+    },
+    {
+        "title": "Green Book",
+        "description": "A working-class Italian-American bouncer becomes the driver of an African-American classical pianist on a tour of venues through the 1960s American South.",
+        "cast": ["Viggo Mortensen", "Mahershala Ali", "Linda Cardellini"],
+        "release_year": 2018,
+        "genres": ["Biography", "Comedy", "Drama"]
+    },
+    {
+        "title": "Roma",
+        "description": "A year in the life of a middle-class family's maid in Mexico City in the early 1970s.",
+        "cast": ["Yalitza Aparicio", "Marina de Tavira", "Diego Cortina Autrey"],
+        "release_year": 2018,
+        "genres": ["Drama"]
+    },
+    {
+        "title": "The Favourite",
+        "description": "In early 18th century England, a frail Queen Anne occupies the throne, and her close friend Lady Sarah governs the country in her stead.",
+        "cast": ["Olivia Colman", "Emma Stone", "Rachel Weisz"],
+        "release_year": 2018,
+        "genres": ["Biography", "Comedy", "Drama"]
+    },
+    {
+        "title": "The Irishman",
+        "description": "A mob hitman recalls his involvement with the rise of the American mafia and the disappearance of Jimmy Hoffa.",
+        "cast": ["Robert De Niro", "Al Pacino", "Joe Pesci"],
+        "release_year": 2019,
+        "genres": ["Biography", "Crime", "Drama"]
+    },
+    {
+        "title": "Judas and the Black Messiah",
+        "description": "Bill O'Neal infiltrates the Black Panther Party per FBI Agent Mitchell and J. Edgar Hoover. As party chairman Fred Hampton ascends, falling for a fellow revolutionary en route, a battle wages for O'Neal's soul.",
+        "cast": ["Daniel Kaluuya", "LaKeith Stanfield", "Jesse Plemons"],
+        "release_year": 2021,
+        "genres": ["Biography", "Drama", "History"]
+    },
+    {
+        "title": "Nomadland",
+        "description": "After losing everything in the Great Recession, a woman embarks on a journey through the American West, living as a van-dwelling modern-day nomad.",
+        "cast": ["Frances McDormand", "David Strathairn", "Linda May"],
+        "release_year": 2020,
+        "genres": ["Drama"]
+    },
+    {
+        "title": "The Trial of the Chicago 7",
+        "description": "The story of seven individuals on trial stemming from various charges surrounding the uprising at the 1968 Democratic National Convention in Chicago, Illinois.",
+        "cast": ["Eddie Redmayne", "Alex Sharp", "Sacha Baron Cohen"],
+        "release_year": 2020,
+        "genres": ["Drama", "History", "Thriller"]
+    },
+    {
+        "title": "Sound of Metal",
+        "description": "A heavy-metal drummer's life is thrown into freefall when he begins to lose his hearing.",
+        "cast": ["Riz Ahmed", "Olivia Cooke", "Paul Raci"],
+        "release_year": 2019,
+        "genres": ["Drama", "Music"]
+    },
+    {
+        "title": "Ma Rainey's Black Bottom",
+        "description": "During a recording session in 1920s Chicago, tensions arise between legendary blues singer Ma Rainey, her ambitious horn player, and the white management determined to control the uncontrollable 'Mother of the Blues.'",
+        "cast": ["Viola Davis", "Chadwick Boseman", "Glynn Turman"],
+        "release_year": 2020,
+        "genres": ["Drama", "Music"]
+    },
+    {
+        "title": "The Two Popes",
+        "description": "Behind Vatican walls, the conservative Pope Benedict and the liberal future Pope Francis must find common ground to forge a new path for the Catholic Church.",
+        "cast": ["Anthony Hopkins", "Jonathan Pryce", "Juan Minujín"],
+        "release_year": 2019,
+        "genres": ["Biography", "Comedy", "Drama"]
+    },
+    {
+        "title": "The French Dispatch",
+        "description": "A love letter to journalists set in an outpost of an American newspaper in a fictional 20th-century French city.",
+        "cast": ["Benicio Del Toro", "Adrien Brody", "Tilda Swinton"],
+        "release_year": 2021,
+        "genres": ["Comedy", "Drama", "Romance"]
+    },
+    {
+        "title": "Don't Look Up",
+        "description": "Two low-level astronomers must go on a giant media tour to warn mankind of an approaching comet that will destroy Earth.",
+        "cast": ["Leonardo DiCaprio", "Jennifer Lawrence", "Meryl Streep"],
+        "release_year": 2021,
+        "genres": ["Comedy", "Drama", "Sci-Fi"]
+    },
+    {
+        "title": "Spencer",
+        "description": "During her Christmas holidays with the royal family at the Sandringham estate in Norfolk, England, Princess Diana decides to leave her marriage to Prince Charles.",
+        "cast": ["Kristen Stewart", "Timothy Spall", "Jack Farthing"],
+        "release_year": 2021,
+        "genres": ["Biography", "Drama"]
+    },
+    {
+        "title": "The Last Duel",
+        "description": "King Charles VI declares that Knight Jean de Carrouges settle his dispute with his squire by challenging him to a duel.",
+        "cast": ["Matt Damon", "Adam Driver", "Jodie Comer"],
+        "release_year": 2021,
+        "genres": ["Action", "Drama", "History"]
+    },
+    {
+        "title": "The Green Knight",
+        "description": "King Arthur's headstrong nephew embarks on a daring quest to confront the Green Knight, a mysterious giant who appears at Camelot.",
+        "cast": ["Dev Patel", "Alicia Vikander", "Joel Edgerton"],
+        "release_year": 2021,
+        "genres": ["Adventure", "Drama", "Fantasy"]
+    },
+    {
+        "title": "No Time to Die",
+        "description": "James Bond has left active service. His peace is short-lived when his old friend Felix Leiter from the CIA turns up asking for help, leading Bond onto the trail of a mysterious villain armed with dangerous new technology.",
+        "cast": ["Daniel Craig", "Ana de Armas", "Rami Malek"],
+        "release_year": 2021,
+        "genres": ["Action", "Adventure", "Thriller"]
+    },
+    {
+        "title": "Malcolm & Marie",
+        "description": "A filmmaker and his girlfriend return home following a celebratory movie premiere, as simmering tensions and painful revelations push them toward a romantic reckoning.",
+        "cast": ["Zendaya", "John David Washington"],
+        "release_year": 2021,
+        "genres": ["Drama", "Romance"]
+    },
+    {
+        "title": "The Dig",
+        "description": "An archaeologist embarks on the historically significant excavation of Sutton Hoo in 1938.",
+        "cast": ["Carey Mulligan", "Ralph Fiennes", "Lily James"],
+        "release_year": 2021,
+        "genres": ["Biography", "Drama", "History"]
+    },
+    {
+        "title": "The Eyes of Tammy Faye",
+        "description": "An intimate look at the extraordinary rise, fall, and redemption of televangelist Tammy Faye Bakker.",
+        "cast": ["Jessica Chastain", "Andrew Garfield", "Cherry Jones"],
+        "release_year": 2021,
+        "genres": ["Biography", "Drama", "History"]
+    },
+    {
+        "title": "Judas and the Black Messiah",
+        "description": "Offered a plea deal by the FBI, William O'Neal infiltrates the Illinois chapter of the Black Panther Party to gather intelligence on Chairman Fred Hampton.",
+        "cast": ["Daniel Kaluuya", "LaKeith Stanfield", "Jesse Plemons"],
+        "release_year": 2021,
+        "genres": ["Biography", "Drama", "History"]
+    },
+    {
+        "title": "C'mon C'mon",
+        "description": "When his sister asks him to look after her son, a radio journalist embarks on a cross-country trip with his energetic nephew to show him life away from the big city.",
+        "cast": ["Joaquin Phoenix", "Gaby Hoffmann", "Woody Norman"],
+        "release_year": 2021,
+        "genres": ["Drama"]
+    },
+    {
+        "title": "Benedetta",
+        "description": "A 17th-century nun in Italy suffers from disturbing religious and erotic visions.",
+        "cast": ["Virginie Efira", "Charlotte Rampling", "Daphné Patakia"],
+        "release_year": 2021,
+        "genres": ["Biography", "Drama", "History"]
+    },
+    {
+        "title": "The Tragedy of Macbeth",
+        "description": "A Scottish lord becomes convinced by a trio of witches that he will become the next King of Scotland, and his ambitious wife supports him in his plans of seizing power.",
+        "cast": ["Denzel Washington", "Frances McDormand", "Alex Hassell"],
+        "release_year": 2021,
+        "genres": ["Drama", "History", "War"]
+    },
+    {
+        "title": "Passing",
+        "description": "In 1920s New York City, a Black woman finds her world upended when her life becomes intertwined with a former childhood friend who's passing as white.",
+        "cast": ["Tessa Thompson", "Ruth Negga", "André Holland"],
+        "release_year": 2021,
+        "genres": ["Drama"]
+    },
+    {
+        "title": "Mass",
+        "description": "Aftermath of a violent tragedy that affects the lives of two couples in different ways.",
+        "cast": ["Jason Isaacs", "Martha Plimpton", "Ann Dowd"],
+        "release_year": 2021,
+        "genres": ["Drama"]
+    },
+    {
+        "title": "Petite Maman",
+        "description": "Nelly has just lost her grandmother and is helping her parents clean out her mother's childhood home. One day, she meets a girl her age as she's building a treehouse.",
+        "cast": ["Joséphine Sanz", "Gabrielle Sanz", "Nina Meurisse"],
+        "release_year": 2021,
+        "genres": ["Drama", "Fantasy"]
+    },
+    {
+        "title": "The Card Counter",
+        "description": "Redemption is the long game in Paul Schrader's The Card Counter. Told with Schrader's trademark cinematic intensity, the revenge thriller tells the story of an ex-military interrogator turned gambler.",
+        "cast": ["Oscar Isaac", "Tiffany Haddish", "Tye Sheridan"],
+        "release_year": 2021,
+        "genres": ["Crime", "Drama", "Thriller"]
+    },
+    {
+        "title": "Being the Ricardos",
+        "description": "Follows Lucy and Desi as they face a crisis that could end their careers and another that could end their marriage.",
+        "cast": ["Nicole Kidman", "Javier Bardem", "J.K. Simmons"],
+        "release_year": 2021,
+        "genres": ["Biography", "Drama"]
+    },
+    {
+        "title": "The Hand of God",
+        "description": "In 1980s Naples, Italy, a young boy experiences the joys and tragedies of ordinary life, underpinned by the arrival of soccer legend Diego Maradona.",
+        "cast": ["Filippo Scotti", "Toni Servillo", "Teresa Saponangelo"],
+        "release_year": 2021,
+        "genres": ["Drama"]
+    },
+    {
+        "title": "The Worst Person in the World",
+        "description": "Chronicles four years in the life of Julie, a young woman who navigates the troubled waters of her love life and struggles to find her career path.",
+        "cast": ["Renate Reinsve", "Anders Danielsen Lie", "Herbert Nordrum"],
+        "release_year": 2021,
+        "genres": ["Comedy", "Drama", "Romance"]
+    },
+    {
+        "title": "Spiral",
+        "description": "A criminal mastermind unleashes a twisted form of justice in Spiral, the terrifying new chapter from the book of Saw.",
+        "cast": ["Chris Rock", "Samuel L. Jackson", "Max Minghella"],
+        "release_year": 2021,
+        "genres": ["Crime", "Horror", "Mystery"]
+    },
+    {
+        "title": "The Little Things",
+        "description": "Two cops track down a serial killer, but their personal differences put them at odds.",
+        "cast": ["Denzel Washington", "Rami Malek", "Jared Leto"],
+        "release_year": 2021,
+        "genres": ["Crime", "Drama", "Thriller"]
+    },
+    {
+        "title": "Last Night in Soho",
+        "description": "An aspiring fashion designer is mysteriously able to enter the 1960s, where she encounters a dazzling wannabe singer. But the glamour is not all it appears to be.",
+        "cast": ["Thomasin McKenzie", "Anya Taylor-Joy", "Matt Smith"],
+        "release_year": 2021,
+        "genres": ["Drama", "Horror", "Mystery"]
+    },
+    {
+        "title": "Wrath of Man",
+        "description": "Mysterious and wild-eyed, a new security guard for a cash truck surprises his coworkers when he unleashes precision skills during a heist.",
+        "cast": ["Jason Statham", "Holt McCallany", "Josh Hartnett"],
+        "release_year": 2021,
+        "genres": ["Action", "Crime", "Thriller"]
+    },
+    {
+        "title": "Finch",
+        "description": "On a post-apocalyptic Earth, a robot, built to protect the life of his creator's beloved dog, learns about life, love, friendship, and what it means to be human.",
+        "cast": ["Tom Hanks", "Caleb Landry Jones"],
+        "release_year": 2021,
+        "genres": ["Drama", "Sci-Fi"]
+    },
+    {
+        "title": "Lamb",
+        "description": "A childless couple in rural Iceland makes an alarming discovery one day in their sheep barn. They soon face the consequences of defying the will of nature.",
+        "cast": ["Noomi Rapace", "Hilmir Snær Guðnason", "Björn Hlynur Haraldsson"],
+        "release_year": 2021,
+        "genres": ["Drama", "Fantasy", "Horror"]
+    },
+    {
+        "title": "Old",
+        "description": "A vacationing family discovers that the secluded beach where they are staying is somehow causing them to age rapidly.",
+        "cast": ["Gael García Bernal", "Vicky Krieps", "Rufus Sewell"],
+        "release_year": 2021,
+        "genres": ["Drama", "Horror", "Mystery"]
+    },
+    {
+        "title": "Zola",
+        "description": "A stripper named Zola embarks on a wild road trip to Florida that quickly spirals out of control.",
+        "cast": ["Taylour Paige", "Riley Keough", "Nicholas Braun"],
+        "release_year": 2020,
+        "genres": ["Comedy", "Crime", "Drama"]
+    },
+    {
+        "title": "The Harder They Fall",
+        "description": "When outlaw Nat Love discovers that his enemy Rufus Buck is being released from prison, he rounds up his gang to track Rufus down and seek revenge.",
+        "cast": ["Jonathan Majors", "Idris Elba", "Regina King"],
+        "release_year": 2021,
+        "genres": ["Action", "Drama", "Western"]
+    },
+    {
+        "title": "Nobody",
+        "description": "A mild-mannered man finds his long-suppressed violent instincts triggered after his house is robbed, leading him to reveal his dark, hidden past.",
+        "cast": ["Bob Odenkirk", "Aleksey Serebryakov", "Connie Nielsen"],
+        "release_year": 2021,
+        "genres": ["Action", "Crime", "Drama"]
+    },
+    {
+        "title": "The Night House",
+        "description": "A widow begins to uncover her recently deceased husband's disturbing secrets as she starts to experience strange occurrences in her lakeside home.",
+        "cast": ["Rebecca Hall", "Sarah Goldberg", "Vondie Curtis-Hall"],
+        "release_year": 2020,
+        "genres": ["Drama", "Horror", "Mystery"]
+    },
+    {
+        "title": "Cruella",
+        "description": "A live-action prequel feature film following a young Cruella de Vil in 1970s London.",
+        "cast": ["Emma Stone", "Emma Thompson", "Joel Fry"],
+        "release_year": 2021,
+        "genres": ["Comedy", "Crime"]
+    },
+    {
+        "title": "The Many Saints of Newark",
+        "description": "Young Anthony Soprano is growing up in one of the most tumultuous eras in Newark, just as rival gangsters begin to rise up and challenge the all-powerful DiMeo crime family.",
+        "cast": ["Alessandro Nivola", "Leslie Odom Jr.", "Jon Bernthal"],
+        "release_year": 2021,
+        "genres": ["Crime", "Drama"]
+    },
+    {
+        "title": "Stillwater",
+        "description": "A father travels from Oklahoma to France to help his estranged daughter, who is in prison for a murder she claims she didn't commit.",
+        "cast": ["Matt Damon", "Abigail Breslin", "Camille Cottin"],
+        "release_year": 2021,
+        "genres": ["Crime", "Drama", "Thriller"]
+    },
+    {
+        "title": "Spiral: From the Book of Saw",
+        "description": "A criminal mastermind unleashes a twisted form of justice in Spiral, the terrifying new chapter from the book of Saw.",
+        "cast": ["Chris Rock", "Samuel L. Jackson", "Max Minghella"],
+        "release_year": 2021,
+        "genres": ["Crime", "Horror", "Mystery"]
+    },
+    {
+        "title": "The Woman in the Window",
+        "description": "An agoraphobic woman living alone in New York begins spying on her new neighbors, only to witness a disturbing act of violence.",
+        "cast": ["Amy Adams", "Gary Oldman", "Anthony Mackie"],
+        "release_year": 2021,
+        "genres": ["Crime", "Drama", "Mystery"]
+    },
+    {
+        "title": "The Father",
+        "description": "A man refuses all assistance from his daughter as he ages and begins to doubt his loved ones, his own mind, and even the fabric of his reality.",
+        "cast": ["Anthony Hopkins", "Olivia Colman", "Mark Gatiss"],
+        "release_year": 2020,
+        "genres": ["Drama"]
     }
 ]
