@@ -8,13 +8,22 @@ import bcrypt
 SECRET_KEY = 'your_secret_key'
 
 # Register a new user with hashed password
-def register_user(username, password):
-    if redis_client.exists(f"user:{username}"):
-        return False
+def register_user(name, username, password):
+    user_key = f"user:{username}"
 
-    # Hash the password and store it as a byte string
+    if redis_client.exists(user_key):
+        return False  # User already exists
+
+    # Hash the password
     hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
-    redis_client.hset(f"user:{username}", "password", hashed_password)
+
+    # Store the user data in Redis
+    redis_client.hset(user_key, mapping={
+        "name": name,
+        "username": username,
+        "password": hashed_password.decode('utf-8')
+    })
+
     return True
 
 def authenticate_user(username, password):

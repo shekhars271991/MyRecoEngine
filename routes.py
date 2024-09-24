@@ -4,7 +4,7 @@ from services.recommender import get_recommendations
 from models.Movie import Movie
 from models.User import User
 import json
-
+import re
 from services.load_movies import load_movie_data 
 from services.redis_service import exists
 
@@ -15,12 +15,27 @@ main_routes = Blueprint('main_routes', __name__)
 # User Registration Route
 @main_routes.route('/register', methods=['POST'])
 def register():
-    username = request.json.get('username')
-    password = request.json.get('password')
+    data = request.get_json()
+    name = data.get('name')
+    username = data.get('username')
+    password = data.get('password')
     
-    if register_user(username, password):
+    # Input validation
+    if not name or not username or not password:
+        return jsonify({'message': 'All fields are required'}), 400
+
+    # Validate username (e.g., alphanumeric, min length)
+    if not re.match(r'^\w{3,}$', username):
+        return jsonify({'message': 'Invalid username format'}), 400
+
+    # Validate password length
+    if len(password) < 6:
+        return jsonify({'message': 'Password must be at least 6 characters long'}), 400
+
+    if register_user(name, username, password):
         return jsonify({'message': 'User registered successfully'}), 201
-    return jsonify({'message': 'User already exists or invalid data'}), 400
+    else:
+        return jsonify({'message': 'User already exists or invalid data'}), 400
 
 # User Login Route
 @main_routes.route('/login', methods=['POST'])
@@ -107,7 +122,7 @@ def get_movie_recommendations(user):
 def load_movies():
     try:
         # Load movies from the movies_data.json file
-        with open('/Users/shekharsuman/MyMovieReco/data/movies_data.json', 'r') as f:
+        with open('data/movies_data.json', 'r') as f:
             movies = json.load(f)
         
         # Insert each movie into Redis
