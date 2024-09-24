@@ -4,6 +4,7 @@ from services.recommender import get_recommendations
 from models.Movie import Movie
 from models.User import User
 import json
+
 from services.load_movies import load_movie_data 
 from services.redis_service import exists
 

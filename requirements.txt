@@ -6,3 +6,4 @@ bcrypt
 sentence_transformers
 numpy
 redisvl
+Flask-Cors
