@@ -3,7 +3,7 @@ from services.user_profiles import get_user_profile
 from services.redisvl_service import search_movies_by_vector_with_filters
 from services.redis_service import getJson
 import numpy as np
-from config import NUM_RECO
+from config import NUM_RECO, SIMILAR_MOVIE_VECTOR_DISTANCE_THRESHOLD
 
 # Function to generate movie recommendations based on user profile
 def get_recommendations(user, genres=None, min_year=None, max_year=None):
@@ -44,9 +44,13 @@ def get_recommendations(user, genres=None, min_year=None, max_year=None):
             if 'embeddings' in movie_details:
                 movie_details.pop('embeddings')
             
-            # Add the movie to the list of recommendations
-            movie_details['vector_distance'] = result['vector_distance']  # Add vector distance from the result
-            recommended_movies.append(movie_details)
+            # Add the movie to the list if vector distance <= SIMILAR_MOVIE_VECTOR_DISTANCE_THRESHOLD
+            vector_distance = float(result['vector_distance'])  # Convert to float for comparison
+            if vector_distance <= SIMILAR_MOVIE_VECTOR_DISTANCE_THRESHOLD:
+                movie_details['vector_distance'] = vector_distance
+                recommended_movies.append(movie_details)
     
-    return recommended_movies, 200
+    # Sort by vector distance and limit to the 5 movies with the least distance
+    recommended_movies = sorted(recommended_movies, key=lambda x: x['vector_distance'])[:5]
 
+    return recommended_movies, 200

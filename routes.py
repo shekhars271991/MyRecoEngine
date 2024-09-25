@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
 from services.auth import authenticate_user, register_user, login_required
-from services.content_based_recommender import get_recommendations
+from services.recommender import get_combined_recommendations
 from services.user_based_recommender import get_similar_users_profile
 from models.Movie import Movie
 from models.User import User
@@ -121,7 +121,7 @@ def get_movie_recommendations(user):
         return jsonify({'error': 'Invalid max_year parameter'}), 400
 
     # Get recommendations with filters
-    recommendations, status_code = get_recommendations(
+    recommendations, status_code = get_combined_recommendations(
         user,
         genres=genres,
         min_year=min_year,
@@ -129,11 +129,8 @@ def get_movie_recommendations(user):
     )
     if status_code == 404:
         return jsonify({"error": "User profile not found."}), 404
-    sorted_recommendations = sorted(recommendations, key=lambda x: x['vector_distance'])
-
-# Return only the top 3 recommendations
-    top_3_recommendations = sorted_recommendations[:3]
-    return jsonify(top_3_recommendations), 200
+   
+    return jsonify(recommendations), 200
 
 # New API to Load Movie Data from JSON File
 @main_routes.route('/load-movies', methods=['GET'])
