@@ -5,7 +5,7 @@ from models.Movie import Movie
 class User:
     def __init__(self, username):
         self.username = username
-        self.profile_key = f"user:{self.username}:profile"
+        self.profile_key = f"profile:{self.username}"
 
     def get_profile(self):
         profile = redis_client.json().get(self.profile_key)

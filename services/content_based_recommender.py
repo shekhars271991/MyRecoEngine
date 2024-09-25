@@ -1,7 +1,7 @@
 from models.Movie import Movie
 from services.user_profiles import get_user_profile
 from services.redisvl_service import search_movies_by_vector_with_filters
-from services.redis_service import redis_client  # Assuming this is the service for interacting with Redis
+from services.redis_service import getJson
 import numpy as np
 from config import NUM_RECO
 
@@ -37,7 +37,7 @@ def get_recommendations(user, genres=None, min_year=None, max_year=None):
             continue
         
         # Fetch full movie details from Redis
-        movie_details = redis_client.json().get(movie_id)
+        movie_details = getJson(movie_id)
         
         if movie_details:
             # Exclude embeddings

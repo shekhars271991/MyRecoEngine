@@ -1,6 +1,7 @@
 from flask import Blueprint, request, jsonify
 from services.auth import authenticate_user, register_user, login_required
-from services.recommender import get_recommendations
+from services.content_based_recommender import get_recommendations
+from services.user_based_recommender import get_similar_users_profile
 from models.Movie import Movie
 from models.User import User
 import json
@@ -93,12 +94,6 @@ def movie_action(user: User):
     # user.update_movie_status(movie_key, watched, rating)
     return jsonify({'message': 'Action updated successfully'}), 200
 
-# Get Recommendations Route
-# @main_routes.route('/movies/recommendations', methods=['GET'])
-# @login_required
-# def get_movie_recommendations(user):
-#     recommendations = get_recommendations(user)
-#     return jsonify(recommendations), 200
 
 @main_routes.route('/movies/recommendations', methods=['GET'])
 @login_required
@@ -155,5 +150,20 @@ def load_movies():
     
     except FileNotFoundError:
         return jsonify({'message': 'Movies data file not found.'}), 404
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+# New API to Load Movie Data from JSON File
+@main_routes.route('/similar-users', methods=['GET'])
+@login_required
+def similar_users(user):
+    try:
+         # Get recommendations with filters
+        similarUsers, status_code = get_similar_users_profile(
+            user
+        )
+        if status_code == 404:
+            return jsonify({"error": "User profile not found."}), 404
+        return jsonify(similarUsers), 200
     except Exception as e:
         return jsonify({'error': str(e)}), 500
