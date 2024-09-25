@@ -1,7 +1,6 @@
 from models.Movie import Movie
 from services.user_profiles import get_user_profile
 from services.redisvl_service import search_movies_by_vector_with_filters
-from services.redis_service import getJson
 import numpy as np
 from config import NUM_RECO, SIMILAR_MOVIE_VECTOR_DISTANCE_THRESHOLD
 
@@ -27,7 +26,7 @@ def get_recommendations(user, genres=None, min_year=None, max_year=None):
         num_results=NUM_RECO
     )
     
-    # Extract movie data from the search results, filtering out watched movies
+    # Extract movie IDs from the search results, filtering out watched movies and those with high vector distance
     recommended_movies = []
     for result in results:
         movie_id = result['id']
@@ -36,21 +35,16 @@ def get_recommendations(user, genres=None, min_year=None, max_year=None):
         if movie_id in watched_movies:
             continue
         
-        # Fetch full movie details from Redis
-        movie_details = getJson(movie_id)
-        
-        if movie_details:
-            # Exclude embeddings
-            if 'embeddings' in movie_details:
-                movie_details.pop('embeddings')
-            
-            # Add the movie to the list if vector distance <= SIMILAR_MOVIE_VECTOR_DISTANCE_THRESHOLD
-            vector_distance = float(result['vector_distance'])  # Convert to float for comparison
-            if vector_distance <= SIMILAR_MOVIE_VECTOR_DISTANCE_THRESHOLD:
-                movie_details['vector_distance'] = vector_distance
-                recommended_movies.append(movie_details)
+        # Filter based on vector distance
+        vector_distance = float(result['vector_distance'])  # Convert to float for comparison
+        if vector_distance <= SIMILAR_MOVIE_VECTOR_DISTANCE_THRESHOLD:
+            recommended_movies.append({
+                'id': movie_id,
+                'vector_distance': vector_distance
+            })  # Store the movie ID and its vector distance
     
-    # Sort by vector distance and limit to the 5 movies with the least distance
-    recommended_movies = sorted(recommended_movies, key=lambda x: x['vector_distance'])[:5]
+    # Sort by vector distance and limit to the top movies with the least distance
+    # recommended_movies = sorted(recommended_movies, key=lambda x: x['vector_distance'])[:CONTENT_BASED_RECO_COUNT]
 
+    # Return only the movie IDs
     return recommended_movies, 200

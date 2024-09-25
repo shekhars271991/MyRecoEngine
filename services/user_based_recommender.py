@@ -23,7 +23,7 @@ def get_similar_users_profile(user):
                 # Fetch additional user details, such as ratings, from Redis or DB
                 filtered_user_id = result_user["id"]
                 user_details = getJson(filtered_user_id)
-                result_user["ratings"] = user_details.get('ratings', [])  # Default to an empty list if not found
+                result_user["ratings"] = user_details.get('ratings', {})  # Default to an empty dictionary if not found
                 filtered_results.append(result_user)
 
     # Return the filtered results
@@ -40,8 +40,8 @@ def get_rated_movies_of_related_users(user):
             "error": "User profile not found."
         }, 404
 
-    # Set to store the union of all movies
-    movies_union = set()
+    # Dictionary to store movies and their ratings
+    movies_with_ratings = {}
 
     # Iterate through the similar users' results
     for result_user in similar_users:
@@ -54,9 +54,18 @@ def get_rated_movies_of_related_users(user):
                 filtered_user_id = result_user["id"]
                 user_details = getJson(filtered_user_id)
                 
-                # Add all movies from the user's ratings to the union set
-                rated_movies = user_details.get('ratings', {}).keys()  # Extract the movie keys from the ratings
-                movies_union.update(rated_movies)  # Add them to the union set
+                # Add all movies from the user's ratings to the dictionary
+                rated_movies = user_details.get('ratings', {})
+                for movie_id, rating in rated_movies.items():
+                    # If the movie is already in the dictionary, you may handle duplicate ratings (e.g., take the max rating)
+                    if movie_id in movies_with_ratings:
+                        # If already present, take the higher rating
+                        movies_with_ratings[movie_id] = max(movies_with_ratings[movie_id], rating)
+                    else:
+                        # Otherwise, just add the movie and its rating
+                        movies_with_ratings[movie_id] = rating
 
-    # Convert the set back to a list for the response
-    return list(movies_union), 200
+    # Convert the dictionary to a list of dictionaries for the response
+    movies_list = [{"movie_id": movie_id, "rating": rating} for movie_id, rating in movies_with_ratings.items()]
+    
+    return movies_list, 200
