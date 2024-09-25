@@ -5,7 +5,7 @@ from config import CONTENT_BASED_RECO_COUNT
 
 
 def get_combined_recommendations(user, genres=None, min_year=None, max_year=None):
-    combined_Reco = {}
+    combined_Reco = []
 
     # Fetch user-based recommendations
     user_reco, user_status_code = get_rated_movies_of_related_users(user)
@@ -20,8 +20,10 @@ def get_combined_recommendations(user, genres=None, min_year=None, max_year=None
     # Sort content-based recommendations by vector distance and limit to the top N
     sorted_content_reco = sorted(content_reco, key=lambda x: x.get('vector_distance', 1.0))[:CONTENT_BASED_RECO_COUNT]
 
-    # Fetch and append movie details for user-based recommendations
-    user_reco_with_details = []
+    # Create a dictionary to store combined movie recommendations with type
+    combined_movies = {}
+
+    # Process user-based recommendations
     for reco in user_reco:
         movie_id = reco['movie_id']
         movie_details = getJson(movie_id)  # Fetch movie details from Redis
@@ -29,16 +31,21 @@ def get_combined_recommendations(user, genres=None, min_year=None, max_year=None
             # Remove embeddings if present
             movie_details.pop('embeddings', None)
             
-            # Append movie details and rating
-            reco_with_details = {
-                "movie_id": movie_id,
-                "rating": reco['rating'],
-                "details": movie_details  # Append movie details here
-            }
-            user_reco_with_details.append(reco_with_details)
+            # If the movie is already in combined_movies, it means it's in both lists
+            if movie_id in combined_movies:
+                combined_movies[movie_id]['type'].append('user')
+                combined_movies[movie_id]['rating'] = reco['rating']  # Update rating
+            else:
+                # Add the movie to combined_movies with user recommendation
+                combined_movies[movie_id] = {
+                    "movie_id": movie_id,
+                    "rating": reco['rating'],
+                    "details": movie_details,
+                    "type": ['user'],  # Start with user type
+                    "vector_distance": None  # Set to None initially
+                }
 
-    # Fetch and append movie details for content-based recommendations
-    content_reco_with_details = []
+    # Process content-based recommendations
     for reco in sorted_content_reco:
         movie_id = reco['id']
         movie_details = getJson(movie_id)  # Fetch movie details from Redis
@@ -46,17 +53,38 @@ def get_combined_recommendations(user, genres=None, min_year=None, max_year=None
             # Remove embeddings if present
             movie_details.pop('embeddings', None)
             
-            # Append movie details and vector distance
-            reco_with_details = {
-                "movie_id": movie_id,
-                "vector_distance": reco['vector_distance'],
-                "details": movie_details  # Append movie details here
-            }
-            content_reco_with_details.append(reco_with_details)
+            # If the movie is already in combined_movies, it's in both lists
+            if movie_id in combined_movies:
+                combined_movies[movie_id]['type'].append('content')
+                combined_movies[movie_id]['vector_distance'] = reco['vector_distance']  # Update vector distance
+            else:
+                # Add the movie to combined_movies with content recommendation
+                combined_movies[movie_id] = {
+                    "movie_id": movie_id,
+                    "rating": None,  # Set to None as it's from content reco
+                    "details": movie_details,
+                    "type": ['content'],  # Start with content type
+                    "vector_distance": reco['vector_distance']
+                }
 
-    # Combine both recommendations in the result dictionary
-    combined_Reco['user_reco'] = user_reco_with_details
-    combined_Reco['content_reco'] = content_reco_with_details
+    # Convert the dictionary to a list and rank the movies
+    combined_list = []
+    for movie in combined_movies.values():
+        combined_list.append(movie)
+
+    # Rank the movies:
+    # - Higher rank for movies that appear in both `user` and `content`
+    # - Higher rank for higher ratings
+    # - Lower vector distance gets a higher rank
+    combined_list = sorted(combined_list, key=lambda x: (
+        'both' in x['type'],  # Prioritize movies in both lists
+        x['rating'] or 0,  # Higher rating gets priority
+        -x['vector_distance'] if x['vector_distance'] is not None else 1.0  # Lower vector distance gets priority
+    ), reverse=True)
+
+    # Add the rank to each movie
+    for rank, movie in enumerate(combined_list, start=1):
+        movie['rank'] = rank
 
     # Return the combined recommendations with a success status
-    return combined_Reco, 200
+    return combined_list, 200
