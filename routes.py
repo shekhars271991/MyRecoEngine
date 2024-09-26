@@ -137,7 +137,7 @@ def get_movie_recommendations(user):
 def load_movies():
     try:
         # Load movies from the movies_data.json file
-        with open('data/movies_data.json', 'r') as f:
+        with open('data/cleaned_movies_data.json', 'r') as f:
             movies = json.load(f)
         
         # Insert each movie into Redis

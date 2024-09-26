@@ -24,7 +24,7 @@ def create_movie_vector(movie):
     vectors.append(genre_vector)
     
     # Cast Encoding using cluster-based approach
-    cast_members = movie.get('cast', [])
+    cast_members = movie.get('actors', [])
     if cast_members:
         cast_vector = get_cast_encoding(cast_members)
         vectors.append(cast_vector)
