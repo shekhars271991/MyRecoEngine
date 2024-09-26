@@ -7,7 +7,7 @@ from models.User import User
 import json
 import re
 from services.load_movies import load_movie_data 
-from services.redis_service import exists
+from services.redis_service import exists, getJson
 
 
 
@@ -164,3 +164,17 @@ def similar_users(user):
         return jsonify(similarUsers), 200
     except Exception as e:
         return jsonify({'error': str(e)}), 500
+    
+@main_routes.route('/user/profile', methods=['GET'])
+@login_required
+def get_user_profile(user: User):
+    try:
+        # Fetch user profile details
+        userprofile_key = "profile:"+user.username
+        profile = getJson(userprofile_key)
+        if 'feature_weights' in profile:
+            profile.pop('feature_weights')
+        return jsonify(profile), 200
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+    

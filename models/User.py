@@ -48,7 +48,7 @@ class User:
                 profile['watched'].remove(movie_id)
                 if movie_id in profile['ratings']:
                     del profile['ratings'][movie_id]  # Remove rating if exists
-                profile['feature_weights'] = self._recalculate_feature_weights(profile)
+                # profile['feature_weights'] = self._recalculate_feature_weights(profile)
             if not is_movie_not_watched:
                 profile['not_watched'].append(movie_id)
 
