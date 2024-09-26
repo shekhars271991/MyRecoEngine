@@ -11,7 +11,13 @@ Features
 -   **Movie Actions**: Mark movies as watched/not watched and rate them.
 -   **Recommendations**: Get movie recommendations based on your viewing preferences.
 -   **Similar Users**: Get similar user profiles based on movie watching behavior.
--   **Load Movies**: Load movie data into Redis from a JSON file.
+-   **Load Movies**: Load sample movie data into Redis from a JSON file.
+
+Frontend
+--------
+
+-   Frontend of this code is available at https://github.com/shekhars271991/movierecofrontend
+
 
 Table of Contents
 -----------------
