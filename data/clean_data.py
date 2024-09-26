@@ -9,7 +9,8 @@ def clean_movie_data(movie):
     for key, value in movie.items():
         # Convert the key to lowercase
         new_key = key.lower()
-        
+        if new_key == "cast":
+            continue 
         # Remove "genre" field if "genres" exists
         if new_key == "genre" and "genres" in movie:
             continue  # Skip this field

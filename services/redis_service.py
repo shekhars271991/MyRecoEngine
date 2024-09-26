@@ -10,15 +10,7 @@ redis_client = redis.Redis(
 def exists(key):
     return redis_client.exists(key)
 
-def get_movie_from_redis(title):
-    movie_key = f"movie:{title.replace(' ', '_').lower()}"
-    movie_data = redis_client.hgetall(movie_key)
-    
-    if movie_data:
-        # Convert the cast string back into a list
-        movie_data['cast'] = movie_data['cast'].split(', ')
-        return movie_data
-    return None
+
 
 def insert_movie(movie, movie_vector):
     """
