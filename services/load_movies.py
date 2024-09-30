@@ -11,7 +11,7 @@ def create_movie_vector(movie):
     vectors = []
     
     # Plot Description Embedding
-    plot_description = movie.get('description', '')
+    plot_description = movie.get('plot', '')
     if plot_description:
         plot_embedding = get_plot_embeddings(plot_description)
         vectors.append(plot_embedding)
@@ -19,7 +19,7 @@ def create_movie_vector(movie):
         vectors.append(np.zeros(MOVIE_PROFILE_VECTOR_DIMENSION))
     
     # Genre Encoding 
-    genres = movie.get('genres', [])
+    genres = movie.get('genre', [])
     genre_vector = get_genre_vector(genres)
     vectors.append(genre_vector)
     
@@ -32,7 +32,7 @@ def create_movie_vector(movie):
         vectors.append(np.zeros(CLUSTER_VECTOR_SIZE))
     
     # Release Year Normalization 
-    release_year = movie.get('release_year')
+    release_year = movie.get('year')
     year_vector = get_year_normalized(release_year)
     vectors.append(year_vector)
     
