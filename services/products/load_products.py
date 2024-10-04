@@ -1,4 +1,5 @@
-
+def  load_product_data():
+    return
 # def create_product_vector(product):
 #     vectors = []
     

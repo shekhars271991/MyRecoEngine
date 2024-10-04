@@ -11,45 +11,45 @@ from services.db.redis_service import exists, getJson
 
 
 
-main_routes = Blueprint('main_routes', __name__)
+movie_routes = Blueprint('movie_routes', __name__, url_prefix="/movies")
 
-# User Registration Route
-@main_routes.route('/register', methods=['POST'])
-def register():
-    data = request.get_json()
-    name = data.get('name')
-    username = data.get('username')
-    password = data.get('password')
+# # User Registration Route
+# @main_routes.route('/register', methods=['POST'])
+# def register():
+#     data = request.get_json()
+#     name = data.get('name')
+#     username = data.get('username')
+#     password = data.get('password')
     
-    # Input validation
-    if not name or not username or not password:
-        return jsonify({'message': 'All fields are required'}), 400
+#     # Input validation
+#     if not name or not username or not password:
+#         return jsonify({'message': 'All fields are required'}), 400
 
-    # Validate username (e.g., alphanumeric, min length)
-    if not re.match(r'^\w{3,}$', username):
-        return jsonify({'message': 'Invalid username format'}), 400
+#     # Validate username (e.g., alphanumeric, min length)
+#     if not re.match(r'^\w{3,}$', username):
+#         return jsonify({'message': 'Invalid username format'}), 400
 
-    # Validate password length
-    if len(password) < 4:
-        return jsonify({'message': 'Password must be at least 6 characters long'}), 400
+#     # Validate password length
+#     if len(password) < 4:
+#         return jsonify({'message': 'Password must be at least 6 characters long'}), 400
 
-    if register_user(name, username, password):
-        return jsonify({'message': 'User registered successfully'}), 201
-    else:
-        return jsonify({'message': 'User already exists or invalid data'}), 400
+#     if register_user(name, username, password):
+#         return jsonify({'message': 'User registered successfully'}), 201
+#     else:
+#         return jsonify({'message': 'User already exists or invalid data'}), 400
 
 # User Login Route
-@main_routes.route('/login', methods=['POST'])
-def login():
-    username = request.json.get('username')
-    password = request.json.get('password')
-    token = authenticate_user(username, password)
-    if token:
-        return jsonify({'access_token': token}), 200
-    return jsonify({'message': 'Invalid credentials'}), 401
+# @main_routes.route('/login', methods=['POST'])
+# def login():
+#     username = request.json.get('username')
+#     password = request.json.get('password')
+#     token = authenticate_user(username, password)
+#     if token:
+#         return jsonify({'access_token': token}), 200
+#     return jsonify({'message': 'Invalid credentials'}), 401
 
 # Get Movie List Route (with descriptions and cast)
-@main_routes.route('/movies', methods=['GET'])
+@movie_routes.route('/', methods=['GET'])
 @login_required
 def get_movies(user):
     # Get page and page_size from query parameters (with defaults)
@@ -74,7 +74,7 @@ def get_movies(user):
     return jsonify(response), 200
 
 # User Action: Watched/Not Watched, Rating Route
-@main_routes.route('/movies/action', methods=['POST'])
+@movie_routes.route('/action', methods=['POST'])
 @login_required
 def movie_action(user: User):
     movie_id = request.json.get('movie_id')
@@ -95,7 +95,7 @@ def movie_action(user: User):
     return jsonify({'message': 'Action updated successfully'}), 200
 
 
-@main_routes.route('/movies/recommendations', methods=['GET'])
+@movie_routes.route('/recommendations', methods=['GET'])
 @login_required
 def get_movie_recommendations(user):
     # Extract query parameters
@@ -133,7 +133,7 @@ def get_movie_recommendations(user):
     return jsonify(recommendations), 200
 
 # New API to Load Movie Data from JSON File
-@main_routes.route('/movies/load-movies', methods=['GET'])
+@movie_routes.route('/load-movies', methods=['GET'])
 def load_movies():
     try:
         # Load movies from the movies_data.json file
@@ -149,13 +149,29 @@ def load_movies():
         return jsonify({'message': 'Movies data file not found.'}), 404
     except Exception as e:
         return jsonify({'error': str(e)}), 500
+    
 
-# New API to Load Movie Data from JSON File
-@main_routes.route('/movies/similar-users', methods=['GET'])
+# User Profile Route
+@movie_routes.route('/profile', methods=['GET'])
+@login_required
+def get_user_profile(user: User):
+    try:
+        # Fetch user profile details
+        userprofile_key = "profile:" + user.username
+        profile = getJson(userprofile_key)
+        if 'feature_weights' in profile:
+            profile.pop('feature_weights')
+        return jsonify(profile), 200
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
+# Similar Users Route
+@movie_routes.route('/similar-users', methods=['GET'])
 @login_required
 def similar_users(user):
     try:
-         # Get recommendations with filters
+        # Get recommendations with filters
         similarUsers, status_code = get_similar_users_profile(
             user
         )
@@ -164,17 +180,3 @@ def similar_users(user):
         return jsonify(similarUsers), 200
     except Exception as e:
         return jsonify({'error': str(e)}), 500
-    
-@main_routes.route('/user/profile', methods=['GET'])
-@login_required
-def get_user_profile(user: User):
-    try:
-        # Fetch user profile details
-        userprofile_key = "profile:"+user.username
-        profile = getJson(userprofile_key)
-        if 'feature_weights' in profile:
-            profile.pop('feature_weights')
-        return jsonify(profile), 200
-    except Exception as e:
-        return jsonify({'error': str(e)}), 500
-    
