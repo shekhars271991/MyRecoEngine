@@ -1,13 +1,13 @@
 from flask import Blueprint, request, jsonify
 from services.auth import authenticate_user, register_user, login_required
-from services.recommender import get_combined_recommendations
-from services.user_based_recommender import get_similar_users_profile
+from services.movies.recommender import get_combined_recommendations
+from services.movies.user_based_recommender import get_similar_users_profile
 from models.Movie import Movie
 from models.User import User
 import json
 import re
-from services.load_movies import load_movie_data 
-from services.redis_service import exists, getJson
+from services.movies.load_movies import load_movie_data 
+from services.db.redis_service import exists, getJson
 
 
 

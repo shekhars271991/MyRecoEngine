@@ -1,4 +1,4 @@
-from services.redis_service import redis_client
+from services.db.redis_service import redis_client
 import numpy as np
 from config import LEARNING_RATE, MOVIE_PROFILE_VECTOR_DIMENSION
 from models.Movie import Movie

@@ -1,11 +1,11 @@
 
 import numpy as np
 from config import MOVIE_PROFILE_VECTOR_DIMENSION
-from services.plot_encoding_service import get_plot_embeddings
-from services.genre_encoding_service import get_genre_vector
-from services.actor_encoding_service import get_cast_encoding, CLUSTER_VECTOR_SIZE
-from services.release_year_encoding_service import get_year_normalized 
-from services.redis_service import insert_movie
+from services.movies.plot_encoding_service import get_plot_embeddings
+from services.movies.genre_encoding_service import get_genre_vector
+from services.movies.actor_encoding_service import get_cast_encoding, CLUSTER_VECTOR_SIZE
+from services.movies.release_year_encoding_service import get_year_normalized 
+from services.db.redis_service import insert_movie
 
 def create_movie_vector(movie):
     vectors = []

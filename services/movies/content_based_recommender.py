@@ -1,6 +1,6 @@
 from models.Movie import Movie
-from services.user_profiles import get_user_profile
-from services.redisvl_service import search_movies_by_vector_with_filters
+from services.db.redis_service import get_user_profile
+from services.db.redisvl_service import search_movies_by_vector_with_filters
 import numpy as np
 from config import NUM_RECO, SIMILAR_MOVIE_VECTOR_DISTANCE_THRESHOLD
 

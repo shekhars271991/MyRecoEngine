@@ -1,6 +1,5 @@
-from services.redisvl_service import search_similar_users
-from services.user_profiles import get_user_profile
-from services.redis_service import getJson
+from services.db.redisvl_service import search_similar_users
+from services.db.redis_service import getJson, get_user_profile
 from config import SIMILAR_USER_VECTOR_DISTANCE_THRESHOLD
 
 def get_similar_users_profile(user):

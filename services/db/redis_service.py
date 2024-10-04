@@ -40,3 +40,8 @@ def insert_movie(movie, movie_vector):
 
 def getJson(key):
     return redis_client.json().get(key)
+
+
+def get_user_profile(user):
+    profile = redis_client.json().get(user.profile_key)
+    return profile
