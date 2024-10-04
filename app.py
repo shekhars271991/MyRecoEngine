@@ -1,5 +1,5 @@
 from flask import Flask
-from routes import main_routes
+from routes_movies import main_routes
 from services.db.redisvl_service import initialize
 from flask_cors import CORS
 

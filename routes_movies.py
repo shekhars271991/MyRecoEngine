@@ -133,7 +133,7 @@ def get_movie_recommendations(user):
     return jsonify(recommendations), 200
 
 # New API to Load Movie Data from JSON File
-@main_routes.route('/load-movies', methods=['GET'])
+@main_routes.route('/movies/load-movies', methods=['GET'])
 def load_movies():
     try:
         # Load movies from the movies_data.json file
@@ -151,7 +151,7 @@ def load_movies():
         return jsonify({'error': str(e)}), 500
 
 # New API to Load Movie Data from JSON File
-@main_routes.route('/similar-users', methods=['GET'])
+@main_routes.route('/movies/similar-users', methods=['GET'])
 @login_required
 def similar_users(user):
     try:
