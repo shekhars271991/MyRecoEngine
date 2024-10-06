@@ -1,0 +1,396 @@
+[
+    {
+        "product": "Freshdesk",
+        "description": "Customer support software providing ticketing, automation, collaboration, and self-service features.",
+        "release_year": 2010,
+        "categories": [
+            "Customer Support",
+            "Help Desk",
+            "Service Desk"
+        ],
+        "key_features": [
+            "Ticketing System",
+            "Knowledge Base",
+            "Automations",
+            "Collaboration Tools",
+            "Omnichannel Support"
+        ],
+        "integrations": [
+            "Slack",
+            "Microsoft Teams",
+            "WhatsApp",
+            "Facebook Messenger",
+            "Shopify"
+        ],
+        "target_users": [
+            "Support Teams",
+            "Customer Service Managers",
+            "SMBs",
+            "Large Enterprises"
+        ],
+        "language_support": [
+            "English",
+            "French",
+            "Spanish",
+            "German",
+            "Japanese"
+        ],
+        "pricing_model": "Subscription-based",
+        "awards": "Gartner Magic Quadrant 2023 - Leader in CRM Customer Engagement",
+        "website": "https://freshdesk.com"
+    },
+    {
+        "product": "Freshservice",
+        "description": "IT service management (ITSM) software for internal IT teams, offering incident, problem, change, asset, and project management.",
+        "release_year": 2014,
+        "categories": [
+            "IT Service Management",
+            "ITSM"
+        ],
+        "key_features": [
+            "Incident Management",
+            "Change Management",
+            "Asset Management",
+            "Problem Management",
+            "Service Catalog"
+        ],
+        "integrations": [
+            "Jira",
+            "Slack",
+            "Azure AD",
+            "Zapier",
+            "AWS"
+        ],
+        "target_users": [
+            "IT Teams",
+            "IT Managers",
+            "Managed Service Providers"
+        ],
+        "language_support": [
+            "English",
+            "French",
+            "Spanish",
+            "German",
+            "Portuguese"
+        ],
+        "pricing_model": "Subscription-based",
+        "awards": "Gartner Peer Insights 2023 - Customers' Choice",
+        "website": "https://freshservice.com"
+    },
+    {
+        "product": "Freshsales",
+        "description": "CRM software for sales teams, offering lead, deal, and contact management, email tracking, and automation.",
+        "release_year": 2016,
+        "categories": [
+            "Sales",
+            "CRM"
+        ],
+        "key_features": [
+            "Lead Management",
+            "Deal Pipeline",
+            "Email Tracking",
+            "Sales Automation",
+            "AI-based Insights"
+        ],
+        "integrations": [
+            "Outlook",
+            "Gmail",
+            "Zapier",
+            "Mailchimp",
+            "Slack"
+        ],
+        "target_users": [
+            "Sales Teams",
+            "Sales Managers",
+            "B2B Companies"
+        ],
+        "language_support": [
+            "English",
+            "Spanish",
+            "French",
+            "Italian",
+            "Dutch"
+        ],
+        "pricing_model": "Subscription-based",
+        "awards": "G2 Crowd - High Performer 2023",
+        "website": "https://freshsales.com"
+    },
+    {
+        "product": "Freshmarketer",
+        "description": "Marketing automation software providing email campaigns, journey builder, lead scoring, and conversion rate optimization.",
+        "release_year": 2018,
+        "categories": [
+            "Marketing Automation",
+            "Lead Nurturing"
+        ],
+        "key_features": [
+            "Email Campaigns",
+            "Journey Builder",
+            "Lead Scoring",
+            "Conversion Optimization",
+            "Landing Page Builder"
+        ],
+        "integrations": [
+            "Zapier",
+            "HubSpot",
+            "Google Analytics",
+            "Facebook Ads",
+            "Shopify"
+        ],
+        "target_users": [
+            "Marketing Teams",
+            "Marketing Managers",
+            "Growth Hackers"
+        ],
+        "language_support": [
+            "English",
+            "German",
+            "French",
+            "Spanish"
+        ],
+        "pricing_model": "Subscription-based",
+        "awards": "Capterra - Best Marketing Automation Tool 2023",
+        "website": "https://freshmarketer.com"
+    },
+    {
+        "product": "Freshchat",
+        "description": "Live chat and messaging software designed to engage customers via website, mobile, and other messaging platforms.",
+        "release_year": 2017,
+        "categories": [
+            "Customer Engagement",
+            "Live Chat",
+            "Messaging"
+        ],
+        "key_features": [
+            "Chatbots",
+            "Omnichannel Messaging",
+            "User Segmentation",
+            "AI-Powered Chat",
+            "In-App Chat"
+        ],
+        "integrations": [
+            "WhatsApp",
+            "Facebook Messenger",
+            "Slack",
+            "Zapier",
+            "Shopify"
+        ],
+        "target_users": [
+            "Customer Support Teams",
+            "Sales Teams",
+            "SMBs",
+            "Large Enterprises"
+        ],
+        "language_support": [
+            "English",
+            "Portuguese",
+            "German",
+            "French",
+            "Italian"
+        ],
+        "pricing_model": "Subscription-based",
+        "awards": "Gartner Peer Insights - Voice of the Customer 2023",
+        "website": "https://freshchat.com"
+    },
+    {
+        "product": "Freshcaller (now part of Freshdesk Contact Center)",
+        "description": "Cloud-based phone system for inbound and outbound call management, designed for customer support and sales teams.",
+        "release_year": 2019,
+        "categories": [
+            "Cloud Telephony",
+            "Contact Center"
+        ],
+        "key_features": [
+            "Call Recording",
+            "IVR",
+            "Call Queues",
+            "Custom Greetings",
+            "Real-Time Dashboard"
+        ],
+        "integrations": [
+            "Freshdesk",
+            "Freshsales",
+            "Zapier",
+            "Slack"
+        ],
+        "target_users": [
+            "Support Teams",
+            "Sales Teams",
+            "Call Centers"
+        ],
+        "language_support": [
+            "English"
+        ],
+        "pricing_model": "Pay-as-you-go",
+        "awards": "Capterra - Emerging Favorite 2023",
+        "website": "https://freshcaller.com"
+    },
+    {
+        "product": "Freshteam",
+        "description": "HR software for recruitment, applicant tracking, onboarding, employee data management, and time-off tracking.",
+        "release_year": 2018,
+        "categories": [
+            "Human Resources",
+            "Recruitment"
+        ],
+        "key_features": [
+            "Applicant Tracking System",
+            "Onboarding Tools",
+            "Time-Off Management",
+            "Employee Directory",
+            "Employee Self-Service"
+        ],
+        "integrations": [
+            "LinkedIn",
+            "Zapier",
+            "Slack",
+            "Outlook"
+        ],
+        "target_users": [
+            "HR Teams",
+            "Recruiters",
+            "SMBs"
+        ],
+        "language_support": [
+            "English",
+            "Spanish",
+            "French"
+        ],
+        "pricing_model": "Subscription-based",
+        "awards": "G2 Best Software Award 2023",
+        "website": "https://freshteam.com"
+    },
+    {
+        "product": "Freshping",
+        "description": "Website monitoring tool that helps businesses track uptime and performance, providing alerts when there are issues.",
+        "release_year": 2019,
+        "categories": [
+            "Website Monitoring",
+            "Performance Tracking"
+        ],
+        "key_features": [
+            "Uptime Monitoring",
+            "Response Time Tracking",
+            "Global Monitoring Locations",
+            "Multi-Channel Alerts",
+            "Public Status Pages"
+        ],
+        "integrations": [
+            "Slack",
+            "Zapier",
+            "Microsoft Teams"
+        ],
+        "target_users": [
+            "IT Teams",
+            "Website Owners",
+            "DevOps Teams"
+        ],
+        "language_support": [
+            "English"
+        ],
+        "pricing_model": "Freemium",
+        "awards": "Product Hunt - Best Monitoring Tool 2023",
+        "website": "https://freshping.com"
+    },
+    {
+        "product": "Freshstatus",
+        "description": "Status page and incident communication tool to inform customers about downtime, maintenance schedules, and service status.",
+        "release_year": 2020,
+        "categories": [
+            "Incident Management",
+            "Status Page"
+        ],
+        "key_features": [
+            "Customizable Status Page",
+            "Incident Alerts",
+            "Maintenance Scheduling",
+            "Real-Time Updates",
+            "Customer Notifications"
+        ],
+        "integrations": [
+            "Slack",
+            "Zapier",
+            "Freshdesk"
+        ],
+        "target_users": [
+            "IT Teams",
+            "Service Providers",
+            "Operations Teams"
+        ],
+        "language_support": [
+            "English"
+        ],
+        "pricing_model": "Freemium",
+        "awards": "FinancesOnline - Best Incident Communication Tool 2023",
+        "website": "https://freshstatus.com"
+    },
+    {
+        "product": "Freshsuccess",
+        "description": "Customer success software designed to improve customer health, reduce churn, and drive customer renewals and growth.",
+        "release_year": 2020,
+        "categories": [
+            "Customer Success",
+            "Retention"
+        ],
+        "key_features": [
+            "Customer Health Scoring",
+            "Renewal Management",
+            "Churn Prediction",
+            "Account Segmentation",
+            "Customer Journey Mapping"
+        ],
+        "integrations": [
+            "Freshdesk",
+            "Freshsales",
+            "Zapier"
+        ],
+        "target_users": [
+            "Customer Success Teams",
+            "Account Managers",
+            "Subscription-Based Companies"
+        ],
+        "language_support": [
+            "English"
+        ],
+        "pricing_model": "Subscription-based",
+        "awards": "G2 - Leader in Customer Success 2023",
+        "website": "https://freshsuccess.com"
+    },
+    {
+        "product": "Freddy AI",
+        "description": "AI-powered assistant integrated across the Freshworks product suite to help automate responses, predict customer queries, and provide intelligent suggestions.",
+        "release_year": 2021,
+        "categories": [
+            "Artificial Intelligence",
+            "Automation"
+        ],
+        "key_features": [
+            "AI Chatbots",
+            "Predictive Analytics",
+            "AI-Driven Suggestions",
+            "Intent Detection",
+            "Workflow Automation"
+        ],
+        "integrations": [
+            "Freshdesk",
+            "Freshsales",
+            "Freshmarketer"
+        ],
+        "target_users": [
+            "Support Teams",
+            "Sales Teams",
+            "Marketing Teams",
+            "SMBs",
+            "Large Enterprises"
+        ],
+        "language_support": [
+            "English",
+            "Spanish",
+            "French",
+            "German"
+        ],
+        "pricing_model": "Add-on",
+        "awards": "AI Breakthrough Awards 2023 - Best Virtual Agent",
+        "website": "https://freshworks.com/freddy-ai"
+    }
+]

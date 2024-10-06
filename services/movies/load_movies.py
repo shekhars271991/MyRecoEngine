@@ -1,6 +1,6 @@
 
 import numpy as np
-from config import MOVIE_PROFILE_VECTOR_DIMENSION
+from config.config import MOVIE_PROFILE_VECTOR_DIMENSION
 from services.movies.plot_encoding_service import get_plot_embeddings
 from services.movies.genre_encoding_service import get_genre_vector
 from services.movies.actor_encoding_service import get_cast_encoding, CLUSTER_VECTOR_SIZE

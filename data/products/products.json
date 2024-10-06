@@ -1,0 +1,1283 @@
+[
+    {
+        "sku": "PROD001",
+        "name": "Wireless Bluetooth Headphones",
+        "description": "Noise-cancelling over-ear headphones with 30-hour battery life.",
+        "release_year": 2023,
+        "categories": [
+            "Electronics",
+            "Audio"
+        ],
+        "price": "$199.99",
+        "manufacturer": "SoundCo",
+        "rating": 4.7,
+        "reviews_count": 1023,
+        "stock": 150,
+        "features": [
+            "Noise Cancelling",
+            "Bluetooth 5.0",
+            "Over-Ear"
+        ],
+        "color": [
+            "Black",
+            "White"
+        ],
+        "warranty": "1 year",
+        "country_of_origin": "China"
+    },
+    {
+        "sku": "PROD002",
+        "name": "Smart LED TV 55-inch",
+        "description": "Ultra HD 4K Smart TV with built-in streaming apps and HDR support.",
+        "release_year": 2022,
+        "categories": [
+            "Electronics",
+            "Home Appliances"
+        ],
+        "price": "$499.99",
+        "manufacturer": "VisionTech",
+        "rating": 4.5,
+        "reviews_count": 2032,
+        "stock": 85,
+        "features": [
+            "4K UHD",
+            "HDR10",
+            "Smart TV"
+        ],
+        "color": [
+            "Black"
+        ],
+        "warranty": "2 years",
+        "country_of_origin": "South Korea"
+    },
+    {
+        "sku": "PROD003",
+        "name": "Ergonomic Office Chair",
+        "description": "Adjustable mesh office chair with lumbar support and headrest.",
+        "release_year": 2021,
+        "categories": [
+            "Furniture",
+            "Office Supplies"
+        ],
+        "price": "$149.99",
+        "manufacturer": "ComfortSeating",
+        "rating": 4.3,
+        "reviews_count": 879,
+        "stock": 240,
+        "features": [
+            "Adjustable",
+            "Mesh Back",
+            "Lumbar Support"
+        ],
+        "color": [
+            "Black",
+            "Gray"
+        ],
+        "warranty": "3 years",
+        "country_of_origin": "USA"
+    },
+    {
+        "sku": "PROD004",
+        "name": "Gaming Laptop 15.6-inch",
+        "description": "High-performance gaming laptop with Intel i7 and RTX 3060 graphics.",
+        "release_year": 2023,
+        "categories": [
+            "Computers",
+            "Gaming"
+        ],
+        "price": "$1,299.99",
+        "manufacturer": "GameMaster",
+        "rating": 4.8,
+        "reviews_count": 542,
+        "stock": 65,
+        "features": [
+            "Intel i7",
+            "RTX 3060",
+            "144Hz Display"
+        ],
+        "color": [
+            "Black"
+        ],
+        "warranty": "1 year",
+        "country_of_origin": "Taiwan"
+    },
+    {
+        "sku": "PROD005",
+        "name": "Espresso Coffee Machine",
+        "description": "Automatic espresso machine with milk frother and 15-bar pressure.",
+        "release_year": 2022,
+        "categories": [
+            "Kitchen Appliances",
+            "Coffee"
+        ],
+        "price": "$299.99",
+        "manufacturer": "CaféBrew",
+        "rating": 4.6,
+        "reviews_count": 1345,
+        "stock": 120,
+        "features": [
+            "Automatic",
+            "15-bar Pressure",
+            "Milk Frother"
+        ],
+        "color": [
+            "Silver",
+            "Black"
+        ],
+        "warranty": "2 years",
+        "country_of_origin": "Italy"
+    },
+    {
+        "sku": "PROD006",
+        "name": "Portable Power Bank 20000mAh",
+        "description": "Compact high-capacity power bank with USB-C fast charging.",
+        "release_year": 2023,
+        "categories": [
+            "Electronics",
+            "Accessories"
+        ],
+        "price": "$49.99",
+        "manufacturer": "ChargeMaster",
+        "rating": 4.4,
+        "reviews_count": 2000,
+        "stock": 500,
+        "features": [
+            "USB-C",
+            "Fast Charging",
+            "Compact"
+        ],
+        "color": [
+            "Black",
+            "White"
+        ],
+        "warranty": "1 year",
+        "country_of_origin": "China"
+    },
+    {
+        "sku": "PROD007",
+        "name": "Wireless Mouse",
+        "description": "Ergonomic wireless mouse with adjustable DPI and silent clicks.",
+        "release_year": 2021,
+        "categories": [
+            "Computers",
+            "Accessories"
+        ],
+        "price": "$19.99",
+        "manufacturer": "TechGear",
+        "rating": 4.2,
+        "reviews_count": 3200,
+        "stock": 400,
+        "features": [
+            "Wireless",
+            "Adjustable DPI",
+            "Silent Clicks"
+        ],
+        "color": [
+            "Black",
+            "Blue",
+            "Red"
+        ],
+        "warranty": "1 year",
+        "country_of_origin": "China"
+    },
+    {
+        "sku": "PROD008",
+        "name": "Smartphone 128GB",
+        "description": "5G smartphone with a 108MP camera and AMOLED display.",
+        "release_year": 2022,
+        "categories": [
+            "Electronics",
+            "Mobile Phones"
+        ],
+        "price": "$699.99",
+        "manufacturer": "PhoneX",
+        "rating": 4.5,
+        "reviews_count": 5000,
+        "stock": 320,
+        "features": [
+            "5G",
+            "108MP Camera",
+            "AMOLED Display"
+        ],
+        "color": [
+            "Black",
+            "Silver",
+            "Blue"
+        ],
+        "warranty": "2 years",
+        "country_of_origin": "China"
+    },
+    {
+        "sku": "PROD009",
+        "name": "Electric Kettle 1.7L",
+        "description": "Stainless steel electric kettle with automatic shut-off and boil-dry protection.",
+        "release_year": 2020,
+        "categories": [
+            "Kitchen Appliances",
+            "Cooking"
+        ],
+        "price": "$29.99",
+        "manufacturer": "HomeComfort",
+        "rating": 4.3,
+        "reviews_count": 1100,
+        "stock": 300,
+        "features": [
+            "Automatic Shut-Off",
+            "Boil-Dry Protection"
+        ],
+        "color": [
+            "Silver",
+            "Black"
+        ],
+        "warranty": "1 year",
+        "country_of_origin": "China"
+    },
+    {
+        "sku": "PROD010",
+        "name": "Yoga Mat Non-Slip",
+        "description": "Eco-friendly non-slip yoga mat for home and studio use.",
+        "release_year": 2021,
+        "categories": [
+            "Sports",
+            "Fitness"
+        ],
+        "price": "$25.99",
+        "manufacturer": "FitFlex",
+        "rating": 4.6,
+        "reviews_count": 950,
+        "stock": 500,
+        "features": [
+            "Non-Slip",
+            "Eco-Friendly",
+            "6mm Thick"
+        ],
+        "color": [
+            "Blue",
+            "Purple",
+            "Green"
+        ],
+        "warranty": "6 months",
+        "country_of_origin": "India"
+    },
+    {
+        "sku": "PROD011",
+        "name": "Cordless Drill Set",
+        "description": "18V cordless drill with 20 accessories, perfect for home DIY projects.",
+        "release_year": 2019,
+        "categories": [
+            "Tools",
+            "Home Improvement"
+        ],
+        "price": "$79.99",
+        "manufacturer": "ToolMax",
+        "rating": 4.4,
+        "reviews_count": 1800,
+        "stock": 150,
+        "features": [
+            "Cordless",
+            "18V",
+            "20 Accessories"
+        ],
+        "color": [
+            "Yellow",
+            "Black"
+        ],
+        "warranty": "2 years",
+        "country_of_origin": "Germany"
+    },
+    {
+        "sku": "PROD012",
+        "name": "Air Purifier",
+        "description": "HEPA air purifier for medium-sized rooms, removes 99.97% of allergens.",
+        "release_year": 2022,
+        "categories": [
+            "Home Appliances",
+            "Health"
+        ],
+        "price": "$129.99",
+        "manufacturer": "PureAir",
+        "rating": 4.5,
+        "reviews_count": 1500,
+        "stock": 200,
+        "features": [
+            "HEPA Filter",
+            "3 Fan Speeds",
+            "Timer"
+        ],
+        "color": [
+            "White"
+        ],
+        "warranty": "1 year",
+        "country_of_origin": "USA"
+    },
+    {
+        "sku": "PROD013",
+        "name": "Electric Scooter",
+        "description": "Foldable electric scooter with 20-mile range and LED headlight.",
+        "release_year": 2023,
+        "categories": [
+            "Transport",
+            "Recreation"
+        ],
+        "price": "$349.99",
+        "manufacturer": "EcoRide",
+        "rating": 4.2,
+        "reviews_count": 800,
+        "stock": 75,
+        "features": [
+            "Foldable",
+            "20-Mile Range",
+            "LED Headlight"
+        ],
+        "color": [
+            "Black",
+            "Red"
+        ],
+        "warranty": "1 year",
+        "country_of_origin": "China"
+    },
+    {
+        "sku": "PROD014",
+        "name": "Instant Pot 6-Quart",
+        "description": "Multi-functional pressure cooker with 7 cooking settings.",
+        "release_year": 2021,
+        "categories": [
+            "Kitchen Appliances",
+            "Cooking"
+        ],
+        "price": "$89.99",
+        "manufacturer": "CookMaster",
+        "rating": 4.7,
+        "reviews_count": 2700,
+        "stock": 100,
+        "features": [
+            "7-in-1",
+            "6-Quart Capacity",
+            "Stainless Steel"
+        ],
+        "color": [
+            "Silver"
+        ],
+        "warranty": "1 year",
+        "country_of_origin": "Canada"
+    },
+    {
+        "sku": "PROD015",
+        "name": "Robot Vacuum Cleaner",
+        "description": "Automatic robot vacuum with Wi-Fi connectivity and voice control.",
+        "release_year": 2022,
+        "categories": [
+            "Home Appliances",
+            "Cleaning"
+        ],
+        "price": "$249.99",
+        "manufacturer": "CleanBot",
+        "rating": 4.5,
+        "reviews_count": 3000,
+        "stock": 90,
+        "features": [
+            "Wi-Fi",
+            "Voice Control",
+            "Self-Charging"
+        ],
+        "color": [
+            "Black",
+            "White"
+        ],
+        "warranty": "1 year",
+        "country_of_origin": "USA"
+    },
+    {
+        "sku": "PROD016",
+        "name": "Electric Toothbrush",
+        "description": "Rechargeable electric toothbrush with 5 cleaning modes and a 2-minute timer.",
+        "release_year": 2021,
+        "categories": [
+            "Personal Care",
+            "Health"
+        ],
+        "price": "$39.99",
+        "manufacturer": "BrightSmile",
+        "rating": 4.6,
+        "reviews_count": 1500,
+        "stock": 250,
+        "features": [
+            "Rechargeable",
+            "5 Cleaning Modes",
+            "2-Minute Timer"
+        ],
+        "color": [
+            "White",
+            "Blue"
+        ],
+        "warranty": "1 year",
+        "country_of_origin": "China"
+    },
+    {
+        "sku": "PROD017",
+        "name": "Smart Thermostat",
+        "description": "Wi-Fi smart thermostat with app control and energy-saving features.",
+        "release_year": 2022,
+        "categories": [
+            "Home Appliances",
+            "Energy Saving"
+        ],
+        "price": "$129.99",
+        "manufacturer": "EcoTemp",
+        "rating": 4.4,
+        "reviews_count": 1200,
+        "stock": 150,
+        "features": [
+            "Wi-Fi",
+            "App Control",
+            "Energy Saving"
+        ],
+        "color": [
+            "White"
+        ],
+        "warranty": "3 years",
+        "country_of_origin": "USA"
+    },
+    {
+        "sku": "PROD018",
+        "name": "Adjustable Dumbbells Set",
+        "description": "Adjustable dumbbells with a weight range of 5-50 lbs, suitable for home workouts.",
+        "release_year": 2020,
+        "categories": [
+            "Sports",
+            "Fitness"
+        ],
+        "price": "$199.99",
+        "manufacturer": "FitHome",
+        "rating": 4.8,
+        "reviews_count": 900,
+        "stock": 80,
+        "features": [
+            "Adjustable Weight",
+            "5-50 lbs",
+            "Non-Slip Grip"
+        ],
+        "color": [
+            "Black"
+        ],
+        "warranty": "2 years",
+        "country_of_origin": "China"
+    },
+    {
+        "sku": "PROD019",
+        "name": "Cordless Stick Vacuum",
+        "description": "Lightweight cordless vacuum cleaner with up to 40 minutes of runtime.",
+        "release_year": 2022,
+        "categories": [
+            "Home Appliances",
+            "Cleaning"
+        ],
+        "price": "$179.99",
+        "manufacturer": "VacMaster",
+        "rating": 4.5,
+        "reviews_count": 1700,
+        "stock": 90,
+        "features": [
+            "Cordless",
+            "Lightweight",
+            "40-Minute Runtime"
+        ],
+        "color": [
+            "Red",
+            "Gray"
+        ],
+        "warranty": "1 year",
+        "country_of_origin": "USA"
+    },
+    {
+        "sku": "PROD020",
+        "name": "Outdoor Solar LED Lights",
+        "description": "Solar-powered outdoor LED lights for gardens, pathways, and patios.",
+        "release_year": 2021,
+        "categories": [
+            "Home Improvement",
+            "Outdoor"
+        ],
+        "price": "$49.99",
+        "manufacturer": "SunGlow",
+        "rating": 4.3,
+        "reviews_count": 2200,
+        "stock": 300,
+        "features": [
+            "Solar Powered",
+            "Waterproof",
+            "8-Pack"
+        ],
+        "color": [
+            "Black"
+        ],
+        "warranty": "1 year",
+        "country_of_origin": "Germany"
+    },
+    {
+        "sku": "PROD021",
+        "name": "Compact Air Fryer",
+        "description": "4-quart compact air fryer with adjustable temperature control.",
+        "release_year": 2022,
+        "categories": [
+            "Kitchen Appliances",
+            "Cooking"
+        ],
+        "price": "$69.99",
+        "manufacturer": "HealthyFry",
+        "rating": 4.7,
+        "reviews_count": 3000,
+        "stock": 120,
+        "features": [
+            "Adjustable Temperature",
+            "Compact Size",
+            "Non-Stick Basket"
+        ],
+        "color": [
+            "Black",
+            "Red"
+        ],
+        "warranty": "1 year",
+        "country_of_origin": "USA"
+    },
+    {
+        "sku": "PROD022",
+        "name": "Wireless Security Camera",
+        "description": "1080p wireless security camera with night vision and motion detection.",
+        "release_year": 2023,
+        "categories": [
+            "Home Security",
+            "Electronics"
+        ],
+        "price": "$89.99",
+        "manufacturer": "SafeHome",
+        "rating": 4.4,
+        "reviews_count": 1500,
+        "stock": 250,
+        "features": [
+            "1080p",
+            "Night Vision",
+            "Motion Detection"
+        ],
+        "color": [
+            "White"
+        ],
+        "warranty": "1 year",
+        "country_of_origin": "China"
+    },
+    {
+        "sku": "PROD023",
+        "name": "Electric Standing Desk",
+        "description": "Height-adjustable electric standing desk with memory preset options.",
+        "release_year": 2021,
+        "categories": [
+            "Furniture",
+            "Office Supplies"
+        ],
+        "price": "$299.99",
+        "manufacturer": "WorkWell",
+        "rating": 4.6,
+        "reviews_count": 1000,
+        "stock": 60,
+        "features": [
+            "Height Adjustable",
+            "Electric Motor",
+            "Memory Preset"
+        ],
+        "color": [
+            "White",
+            "Black"
+        ],
+        "warranty": "3 years",
+        "country_of_origin": "USA"
+    },
+    {
+        "sku": "PROD024",
+        "name": "High-Speed Blender",
+        "description": "Professional-grade high-speed blender with variable speed control.",
+        "release_year": 2022,
+        "categories": [
+            "Kitchen Appliances",
+            "Cooking"
+        ],
+        "price": "$249.99",
+        "manufacturer": "BlendPro",
+        "rating": 4.8,
+        "reviews_count": 2000,
+        "stock": 100,
+        "features": [
+            "Variable Speed",
+            "Stainless Steel Blades",
+            "64-Ounce Container"
+        ],
+        "color": [
+            "Black",
+            "Silver"
+        ],
+        "warranty": "2 years",
+        "country_of_origin": "USA"
+    },
+    {
+        "sku": "PROD025",
+        "name": "Weighted Blanket 15 lbs",
+        "description": "Breathable weighted blanket designed to improve sleep and reduce anxiety.",
+        "release_year": 2021,
+        "categories": [
+            "Bedding",
+            "Home"
+        ],
+        "price": "$59.99",
+        "manufacturer": "RestWell",
+        "rating": 4.5,
+        "reviews_count": 1800,
+        "stock": 200,
+        "features": [
+            "15 lbs",
+            "Breathable",
+            "Machine Washable"
+        ],
+        "color": [
+            "Gray",
+            "Blue"
+        ],
+        "warranty": "1 year",
+        "country_of_origin": "India"
+    },
+    {
+        "sku": "PROD026",
+        "name": "Electric Pressure Washer",
+        "description": "2000 PSI electric pressure washer for cleaning driveways, patios, and vehicles.",
+        "release_year": 2020,
+        "categories": [
+            "Tools",
+            "Home Improvement"
+        ],
+        "price": "$159.99",
+        "manufacturer": "CleanPro",
+        "rating": 4.3,
+        "reviews_count": 1400,
+        "stock": 80,
+        "features": [
+            "2000 PSI",
+            "Electric",
+            "Quick-Connect Nozzles"
+        ],
+        "color": [
+            "Green",
+            "Black"
+        ],
+        "warranty": "2 years",
+        "country_of_origin": "Germany"
+    },
+    {
+        "sku": "PROD027",
+        "name": "Indoor Stationary Bike",
+        "description": "Indoor exercise bike with adjustable resistance and digital display.",
+        "release_year": 2021,
+        "categories": [
+            "Sports",
+            "Fitness"
+        ],
+        "price": "$299.99",
+        "manufacturer": "RideFit",
+        "rating": 4.5,
+        "reviews_count": 950,
+        "stock": 120,
+        "features": [
+            "Adjustable Resistance",
+            "LCD Display",
+            "Bottle Holder"
+        ],
+        "color": [
+            "Black",
+            "Red"
+        ],
+        "warranty": "1 year",
+        "country_of_origin": "China"
+    },
+    {
+        "sku": "PROD028",
+        "name": "3D Printer",
+        "description": "DIY 3D printer with large print area and support for multiple filaments.",
+        "release_year": 2022,
+        "categories": [
+            "Tools",
+            "Technology"
+        ],
+        "price": "$399.99",
+        "manufacturer": "PrintMaster",
+        "rating": 4.2,
+        "reviews_count": 700,
+        "stock": 50,
+        "features": [
+            "Large Print Area",
+            "Multi-Filament Support",
+            "DIY Assembly"
+        ],
+        "color": [
+            "Black"
+        ],
+        "warranty": "1 year",
+        "country_of_origin": "USA"
+    },
+    {
+        "sku": "PROD029",
+        "name": "Digital Air Fryer Oven",
+        "description": "10-quart air fryer oven with rotisserie and dehydrator settings.",
+        "release_year": 2021,
+        "categories": [
+            "Kitchen Appliances",
+            "Cooking"
+        ],
+        "price": "$159.99",
+        "manufacturer": "CookSmart",
+        "rating": 4.6,
+        "reviews_count": 1200,
+        "stock": 90,
+        "features": [
+            "Rotisserie",
+            "Dehydrator",
+            "Digital Display"
+        ],
+        "color": [
+            "Black",
+            "Silver"
+        ],
+        "warranty": "1 year",
+        "country_of_origin": "Canada"
+    },
+    {
+        "sku": "PROD030",
+        "name": "Smart Light Bulbs 4-Pack",
+        "description": "Wi-Fi-enabled LED light bulbs with color-changing and voice control.",
+        "release_year": 2020,
+        "categories": [
+            "Home Improvement",
+            "Lighting"
+        ],
+        "price": "$39.99",
+        "manufacturer": "BrightHome",
+        "rating": 4.4,
+        "reviews_count": 3500,
+        "stock": 400,
+        "features": [
+            "Color Changing",
+            "Wi-Fi",
+            "Voice Control"
+        ],
+        "color": [
+            "Multi-color"
+        ],
+        "warranty": "1 year",
+        "country_of_origin": "China"
+    },
+    {
+        "sku": "PROD031",
+        "name": "Electric Scooter for Kids",
+        "description": "Lightweight electric scooter with 10-mile range and 6 mph max speed.",
+        "release_year": 2022,
+        "categories": [
+            "Transport",
+            "Kids"
+        ],
+        "price": "$129.99",
+        "manufacturer": "RideKids",
+        "rating": 4.3,
+        "reviews_count": 600,
+        "stock": 150,
+        "features": [
+            "10-Mile Range",
+            "6 mph Max Speed",
+            "Lightweight"
+        ],
+        "color": [
+            "Pink",
+            "Blue"
+        ],
+        "warranty": "1 year",
+        "country_of_origin": "China"
+    },
+    {
+        "sku": "PROD032",
+        "name": "Smart Video Doorbell",
+        "description": "Wi-Fi video doorbell with two-way audio and motion detection.",
+        "release_year": 2023,
+        "categories": [
+            "Home Security",
+            "Electronics"
+        ],
+        "price": "$99.99",
+        "manufacturer": "SafeView",
+        "rating": 4.5,
+        "reviews_count": 2000,
+        "stock": 180,
+        "features": [
+            "Two-Way Audio",
+            "Motion Detection",
+            "Night Vision"
+        ],
+        "color": [
+            "Silver"
+        ],
+        "warranty": "1 year",
+        "country_of_origin": "China"
+    },
+    {
+        "sku": "PROD033",
+        "name": "Outdoor Camping Tent",
+        "description": "4-person waterproof camping tent with easy setup and ventilation windows.",
+        "release_year": 2021,
+        "categories": [
+            "Outdoor",
+            "Recreation"
+        ],
+        "price": "$99.99",
+        "manufacturer": "CampersWay",
+        "rating": 4.7,
+        "reviews_count": 1500,
+        "stock": 100,
+        "features": [
+            "Waterproof",
+            "Ventilation Windows",
+            "Easy Setup"
+        ],
+        "color": [
+            "Green",
+            "Blue"
+        ],
+        "warranty": "6 months",
+        "country_of_origin": "Vietnam"
+    },
+    {
+        "sku": "PROD034",
+        "name": "Electric Hot Water Dispenser",
+        "description": "Instant electric hot water dispenser with temperature control.",
+        "release_year": 2021,
+        "categories": [
+            "Kitchen Appliances",
+            "Cooking"
+        ],
+        "price": "$79.99",
+        "manufacturer": "HotServe",
+        "rating": 4.4,
+        "reviews_count": 1300,
+        "stock": 140,
+        "features": [
+            "Temperature Control",
+            "Instant Hot Water",
+            "2.5L Capacity"
+        ],
+        "color": [
+            "Silver",
+            "White"
+        ],
+        "warranty": "1 year",
+        "country_of_origin": "China"
+    },
+    {
+        "sku": "PROD035",
+        "name": "Electric Hand Massager",
+        "description": "Hand massager with air compression and heat for pain relief.",
+        "release_year": 2020,
+        "categories": [
+            "Health",
+            "Personal Care"
+        ],
+        "price": "$59.99",
+        "manufacturer": "RelaxCo",
+        "rating": 4.6,
+        "reviews_count": 1100,
+        "stock": 200,
+        "features": [
+            "Air Compression",
+            "Heat",
+            "Portable"
+        ],
+        "color": [
+            "White"
+        ],
+        "warranty": "1 year",
+        "country_of_origin": "Japan"
+    },
+    {
+        "sku": "PROD036",
+        "name": "Foam Roller Set",
+        "description": "3-piece foam roller set for muscle recovery and stretching exercises.",
+        "release_year": 2019,
+        "categories": [
+            "Sports",
+            "Fitness"
+        ],
+        "price": "$29.99",
+        "manufacturer": "FitRelief",
+        "rating": 4.8,
+        "reviews_count": 800,
+        "stock": 300,
+        "features": [
+            "3-Piece Set",
+            "Non-Slip",
+            "High-Density"
+        ],
+        "color": [
+            "Black",
+            "Blue"
+        ],
+        "warranty": "6 months",
+        "country_of_origin": "India"
+    },
+    {
+        "sku": "PROD037",
+        "name": "Bluetooth Soundbar",
+        "description": "Bluetooth soundbar with subwoofer for enhanced TV audio experience.",
+        "release_year": 2022,
+        "categories": [
+            "Electronics",
+            "Audio"
+        ],
+        "price": "$119.99",
+        "manufacturer": "SoundMax",
+        "rating": 4.5,
+        "reviews_count": 1700,
+        "stock": 90,
+        "features": [
+            "Bluetooth",
+            "Subwoofer",
+            "Remote Control"
+        ],
+        "color": [
+            "Black"
+        ],
+        "warranty": "1 year",
+        "country_of_origin": "South Korea"
+    },
+    {
+        "sku": "PROD038",
+        "name": "Adjustable Standing Desk Converter",
+        "description": "Height-adjustable desk converter for creating a standing workstation.",
+        "release_year": 2021,
+        "categories": [
+            "Furniture",
+            "Office Supplies"
+        ],
+        "price": "$99.99",
+        "manufacturer": "DeskCo",
+        "rating": 4.6,
+        "reviews_count": 1200,
+        "stock": 130,
+        "features": [
+            "Height Adjustable",
+            "Ergonomic",
+            "Portable"
+        ],
+        "color": [
+            "Black"
+        ],
+        "warranty": "2 years",
+        "country_of_origin": "USA"
+    },
+    {
+        "sku": "PROD039",
+        "name": "Smart Ceiling Fan",
+        "description": "Wi-Fi-enabled smart ceiling fan with remote and app control.",
+        "release_year": 2023,
+        "categories": [
+            "Home Improvement",
+            "Cooling"
+        ],
+        "price": "$149.99",
+        "manufacturer": "BreezeHome",
+        "rating": 4.5,
+        "reviews_count": 700,
+        "stock": 70,
+        "features": [
+            "Wi-Fi",
+            "Remote Control",
+            "Reversible Blades"
+        ],
+        "color": [
+            "White",
+            "Brown"
+        ],
+        "warranty": "3 years",
+        "country_of_origin": "India"
+    },
+    {
+        "sku": "PROD040",
+        "name": "Laptop Cooling Pad",
+        "description": "Portable laptop cooling pad with 5 adjustable fans and RGB lights.",
+        "release_year": 2022,
+        "categories": [
+            "Computers",
+            "Accessories"
+        ],
+        "price": "$29.99",
+        "manufacturer": "CoolTech",
+        "rating": 4.4,
+        "reviews_count": 2200,
+        "stock": 350,
+        "features": [
+            "5 Fans",
+            "RGB Lights",
+            "Adjustable Stand"
+        ],
+        "color": [
+            "Black"
+        ],
+        "warranty": "1 year",
+        "country_of_origin": "China"
+    },
+    {
+        "sku": "PROD041",
+        "name": "Wi-Fi Mesh System",
+        "description": "Whole home Wi-Fi mesh system with coverage up to 5000 sq ft.",
+        "release_year": 2021,
+        "categories": [
+            "Electronics",
+            "Networking"
+        ],
+        "price": "$199.99",
+        "manufacturer": "NetMax",
+        "rating": 4.7,
+        "reviews_count": 2500,
+        "stock": 150,
+        "features": [
+            "Dual-Band",
+            "Parental Controls",
+            "App Management"
+        ],
+        "color": [
+            "White"
+        ],
+        "warranty": "2 years",
+        "country_of_origin": "Taiwan"
+    },
+    {
+        "sku": "PROD042",
+        "name": "Electric Waffle Maker",
+        "description": "Non-stick electric waffle maker with temperature control.",
+        "release_year": 2021,
+        "categories": [
+            "Kitchen Appliances",
+            "Cooking"
+        ],
+        "price": "$39.99",
+        "manufacturer": "WaffleKing",
+        "rating": 4.3,
+        "reviews_count": 1300,
+        "stock": 80,
+        "features": [
+            "Non-Stick",
+            "Temperature Control",
+            "Indicator Light"
+        ],
+        "color": [
+            "Red"
+        ],
+        "warranty": "1 year",
+        "country_of_origin": "Belgium"
+    },
+    {
+        "sku": "PROD043",
+        "name": "Smart Electric Heater",
+        "description": "Portable smart heater with remote control and thermostat.",
+        "release_year": 2022,
+        "categories": [
+            "Home Appliances",
+            "Heating"
+        ],
+        "price": "$89.99",
+        "manufacturer": "HeatPro",
+        "rating": 4.5,
+        "reviews_count": 1000,
+        "stock": 100,
+        "features": [
+            "Remote Control",
+            "Thermostat",
+            "Portable"
+        ],
+        "color": [
+            "Black"
+        ],
+        "warranty": "1 year",
+        "country_of_origin": "China"
+    },
+    {
+        "sku": "PROD044",
+        "name": "Inflatable Kayak",
+        "description": "Two-person inflatable kayak with oars and hand pump.",
+        "release_year": 2020,
+        "categories": [
+            "Outdoor",
+            "Water Sports"
+        ],
+        "price": "$149.99",
+        "manufacturer": "AquaSports",
+        "rating": 4.6,
+        "reviews_count": 700,
+        "stock": 50,
+        "features": [
+            "Two-Person",
+            "Includes Oars",
+            "Hand Pump"
+        ],
+        "color": [
+            "Blue"
+        ],
+        "warranty": "6 months",
+        "country_of_origin": "USA"
+    },
+    {
+        "sku": "PROD045",
+        "name": "Cordless Electric Screwdriver",
+        "description": "Compact cordless electric screwdriver with rechargeable battery.",
+        "release_year": 2021,
+        "categories": [
+            "Tools",
+            "Home Improvement"
+        ],
+        "price": "$24.99",
+        "manufacturer": "ToolEase",
+        "rating": 4.5,
+        "reviews_count": 1400,
+        "stock": 250,
+        "features": [
+            "Rechargeable",
+            "Compact Design",
+            "LED Light"
+        ],
+        "color": [
+            "Red"
+        ],
+        "warranty": "1 year",
+        "country_of_origin": "Germany"
+    },
+    {
+        "sku": "PROD046",
+        "name": "Cordless Hair Clippers",
+        "description": "Rechargeable cordless hair clippers with precision blades and comb attachments.",
+        "release_year": 2022,
+        "categories": [
+            "Personal Care",
+            "Grooming"
+        ],
+        "price": "$34.99",
+        "manufacturer": "TrimPro",
+        "rating": 4.3,
+        "reviews_count": 800,
+        "stock": 160,
+        "features": [
+            "Precision Blades",
+            "Rechargeable",
+            "Multiple Combs"
+        ],
+        "color": [
+            "Black",
+            "Silver"
+        ],
+        "warranty": "1 year",
+        "country_of_origin": "Japan"
+    },
+    {
+        "sku": "PROD047",
+        "name": "Digital Bathroom Scale",
+        "description": "High-accuracy digital bathroom scale with step-on technology.",
+        "release_year": 2020,
+        "categories": [
+            "Health",
+            "Personal Care"
+        ],
+        "price": "$19.99",
+        "manufacturer": "WeightWise",
+        "rating": 4.6,
+        "reviews_count": 2200,
+        "stock": 400,
+        "features": [
+            "High Accuracy",
+            "Step-On Technology",
+            "Tempered Glass"
+        ],
+        "color": [
+            "Black",
+            "White"
+        ],
+        "warranty": "1 year",
+        "country_of_origin": "China"
+    },
+    {
+        "sku": "PROD048",
+        "name": "Smart Robot Toy",
+        "description": "Interactive smart robot toy for kids, programmable with voice commands.",
+        "release_year": 2023,
+        "categories": [
+            "Toys",
+            "Kids"
+        ],
+        "price": "$49.99",
+        "manufacturer": "RoboFun",
+        "rating": 4.4,
+        "reviews_count": 500,
+        "stock": 200,
+        "features": [
+            "Voice Commands",
+            "Programmable",
+            "Interactive"
+        ],
+        "color": [
+            "White",
+            "Blue"
+        ],
+        "warranty": "6 months",
+        "country_of_origin": "China"
+    },
+    {
+        "sku": "PROD049",
+        "name": "Electric Skillet",
+        "description": "12-inch electric skillet with glass lid and adjustable temperature.",
+        "release_year": 2021,
+        "categories": [
+            "Kitchen Appliances",
+            "Cooking"
+        ],
+        "price": "$39.99",
+        "manufacturer": "SkilletMaster",
+        "rating": 4.2,
+        "reviews_count": 1300,
+        "stock": 150,
+        "features": [
+            "Adjustable Temperature",
+            "Glass Lid",
+            "Non-Stick"
+        ],
+        "color": [
+            "Black"
+        ],
+        "warranty": "1 year",
+        "country_of_origin": "USA"
+    },
+    {
+        "sku": "PROD050",
+        "name": "USB Desk Fan",
+        "description": "Portable USB-powered desk fan with 3 speed settings.",
+        "release_year": 2022,
+        "categories": [
+            "Home Appliances",
+            "Cooling"
+        ],
+        "price": "$14.99",
+        "manufacturer": "CoolBreeze",
+        "rating": 4.3,
+        "reviews_count": 1200,
+        "stock": 500,
+        "features": [
+            "USB Powered",
+            "3 Speeds",
+            "Adjustable Angle"
+        ],
+        "color": [
+            "White",
+            "Black"
+        ],
+        "warranty": "6 months",
+        "country_of_origin": "China"
+    }
+]

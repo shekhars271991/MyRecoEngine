@@ -1,0 +1,8 @@
+{
+    "categories": ["Electronics", "Audio", "Video", "Computers", "Accessories"],
+    "features": ["Noise Cancelling", "Bluetooth 5.0", "Over-Ear", "Wireless", "Touch Control"],
+    "colors": ["Black", "White", "Red", "Blue", "Green"],
+    "manufacturers": ["SoundCo", "VisionCorp", "TechWorld", "GadgetPro"],
+    "countries": ["China", "USA", "Germany", "Japan", "South Korea"]
+  }
+  

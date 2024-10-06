@@ -1,6 +1,6 @@
 from services.db.redis_service import redis_client
 import numpy as np
-from config import LEARNING_RATE, MOVIE_PROFILE_VECTOR_DIMENSION
+from config.config import LEARNING_RATE, MOVIE_PROFILE_VECTOR_DIMENSION
 from models.Movie import Movie
 class User:
     def __init__(self, username):

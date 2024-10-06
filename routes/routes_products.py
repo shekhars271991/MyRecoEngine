@@ -6,8 +6,11 @@ from models.Product import Product  # Assuming you have a Product model
 from models.User import User
 import json
 import re
-from services.products.load_products import load_product_data  # Assuming this service exists
 from services.db.redis_service import exists, getJson
+from config.config import PRODUCTS_DATA_FILEPATH
+
+from services.products.load_products import load_all_products
+
 
 products_routes = Blueprint('products_routes', __name__, url_prefix='/product')
 
@@ -98,15 +101,14 @@ def get_product_recommendations(user):
 @products_routes.route('/load', methods=['GET'])
 def load_products():
     try:
-        # Load products from the products_data.json file
-        with open('data/cleaned_products_data.json', 'r') as f:
+        # Load products from the JSON file
+        with open(PRODUCTS_DATA_FILEPATH, 'r') as f:
             products = json.load(f)
-        
-        # Insert each product into Redis
-        for product in products:
-            load_product_data(product) 
+
+        load_all_products(products)
+
         return jsonify({'message': f'{len(products)} products inserted into Redis successfully!'}), 200
-    
+
     except FileNotFoundError:
         return jsonify({'message': 'Products data file not found.'}), 404
     except Exception as e:

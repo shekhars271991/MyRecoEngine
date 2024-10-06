@@ -2,7 +2,7 @@ from models.Movie import Movie
 from services.db.redis_service import get_user_profile
 from services.db.redisvl_service import search_movies_by_vector_with_filters
 import numpy as np
-from config import NUM_RECO, SIMILAR_MOVIE_VECTOR_DISTANCE_THRESHOLD
+from config.config import NUM_RECO, SIMILAR_MOVIE_VECTOR_DISTANCE_THRESHOLD
 
 # Function to generate movie recommendations based on user profile
 def get_recommendations(user, genres=None, min_year=None, max_year=None):

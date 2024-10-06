@@ -1,4 +1,4 @@
-from config import MOVIE_PROFILE_VECTOR_DIMENSION
+from config.config import MOVIE_PROFILE_VECTOR_DIMENSION
 movie_schema = {
     "index": {
         "name": "movie_index",

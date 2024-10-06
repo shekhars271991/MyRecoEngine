@@ -1,7 +1,7 @@
 import json
 from services.db.redis_service import redis_client
 import numpy as np
-from config import MOVIE_PROFILE_VECTOR_DIMENSION, LEARNING_RATE
+from config.config import MOVIE_PROFILE_VECTOR_DIMENSION, LEARNING_RATE
 
 class Movie:
     @staticmethod

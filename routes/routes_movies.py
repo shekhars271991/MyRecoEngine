@@ -8,7 +8,7 @@ import json
 import re
 from services.movies.load_movies import load_movie_data 
 from services.db.redis_service import exists, getJson
-
+from config.config import MOVIEDATA_FILEPATH
 
 
 movie_routes = Blueprint('movie_routes', __name__, url_prefix="/movies")
@@ -137,7 +137,7 @@ def get_movie_recommendations(user):
 def load_movies():
     try:
         # Load movies from the movies_data.json file
-        with open('data/cleaned_movies_data.json', 'r') as f:
+        with open(MOVIEDATA_FILEPATH, 'r') as f:
             movies = json.load(f)
         
         # Insert each movie into Redis

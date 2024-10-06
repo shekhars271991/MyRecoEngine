@@ -45,3 +45,28 @@ def getJson(key):
 def get_user_profile(user):
     profile = redis_client.json().get(user.profile_key)
     return profile
+
+
+def insert_product(product, product_vector):
+    """
+    Inserts a product into Redis using RedisJSON with the given vector.
+    If the product already exists, it skips the insertion.
+
+    :param product: Dictionary containing product data.
+    :param product_vector: Numpy array representing the product vector.
+    """
+    # Generate the Redis key in the format 'product:sku'
+    product_key = f"product:{product['sku']}"
+
+    # Check if the product already exists in Redis
+    if redis_client.exists(product_key):
+        print(f"Product with SKU '{product['sku']}' already exists in Redis. Skipping insertion.")
+        return
+
+    # Prepare the data to store
+    product_data = product.copy()
+    product_data['vector'] = product_vector.tolist()  # Convert NumPy array to list
+
+    # Store the product data as a JSON document in Redis
+    redis_client.json().set(product_key, '$', product_data)
+    print(f"Product with SKU '{product['sku']}' inserted into Redis with key '{product_key}'.")
