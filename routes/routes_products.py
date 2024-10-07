@@ -11,12 +11,10 @@ from config.config import PRODUCTS_DATA_FILEPATH
 
 from services.products.load_products import load_all_products
 from services.db.redis_service import get_all_products
+from services.products.generate_recommendations.recommender_service import get_combined_product_recommendations
 
 
 products_routes = Blueprint('products_routes', __name__, url_prefix='/product')
-
-def get_combined_product_recommendations():
-    return
 
 @products_routes.route('/', methods=['GET'])
 @login_required

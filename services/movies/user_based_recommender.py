@@ -1,4 +1,4 @@
-from services.db.redisvl_service import search_similar_users
+from services.db.redisvl_service import search_similar_movie_users
 from services.db.redis_service import getJson, get_user_movie_profile
 from config.config import SIMILAR_USER_VECTOR_DISTANCE_THRESHOLD
 
@@ -9,7 +9,7 @@ def get_similar_users_movie_profile(user):
             "error": "User profile not found."
         }, 404
     profile_vector = profile.get('feature_weights', [])
-    results = search_similar_users(profile_vector)
+    results = search_similar_movie_users(profile_vector)
     
     # Filter the results: Exclude the current user and only include users with a vector distance < SIMILAR_USER_VECTOR_DISTANCE_THRESHOLD
     filtered_results = []

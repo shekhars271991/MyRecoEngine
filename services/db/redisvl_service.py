@@ -5,7 +5,10 @@ from redisvl.query import VectorQuery
 from redisvl.query.filter import Tag, Num
 import numpy as np
 from schemas.movie import movie_schema
-from schemas.user import user_schema
+from schemas.user_movie import user_movie_schema
+from schemas.user_product import user_product_schema
+
+from schemas.product import product_schema
 
 # Initialize the Redis client with exception handling
 try:
@@ -26,8 +29,15 @@ except (RedisError, ConnectionError) as e:
 try:
     movie_index = SearchIndex.from_dict(movie_schema)
     movie_index.set_client(redis_client)
-    user_index = SearchIndex.from_dict(user_schema)
-    user_index.set_client(redis_client)
+    user_movie_index = SearchIndex.from_dict(user_movie_schema)
+    user_movie_index.set_client(redis_client)
+
+# product indices
+    product_index = SearchIndex.from_dict(product_schema)
+    product_index.set_client(redis_client)
+    user_product_index = SearchIndex.from_dict(user_product_schema)
+    user_product_index.set_client(redis_client)
+
 except Exception as e:
     print(f"Failed to create SearchIndex instance: {e}")
     raise SystemExit(1)
@@ -44,13 +54,13 @@ def create_movie_index(overwrite=False):
         print(f"Failed to create movie index: {e}")
         raise
 
-def create_user_index(overwrite=False):
+def create_user_movie_index(overwrite=False):
     """
     Creates the user index in Redis.
     :param overwrite: If True, overwrites the existing index.
     """
     try:
-        user_index.create(overwrite=overwrite)
+        user_movie_index.create(overwrite=overwrite)
         print("User index created successfully.")
     except Exception as e:
         print(f"Failed to create user index: {e}")
@@ -108,7 +118,7 @@ def search_movies_by_vector_with_filters(query_vector, genres=None, min_year=Non
         raise
 
 
-def search_similar_users(query_vector,num_results=10):
+def search_similar_movie_users(query_vector,num_results=10):
     try:
         # Convert the query vector to bytes
         vector = np.array(query_vector, dtype=np.float32).tobytes()
@@ -120,7 +130,7 @@ def search_similar_users(query_vector,num_results=10):
         )
 
         # Perform the query
-        results = user_index.query(vq)
+        results = user_movie_index.query(vq)
         return results
     
     except (RedisError, ConnectionError) as e:
@@ -134,7 +144,87 @@ def initialize():
     """
     try:
         create_movie_index(overwrite=False)
-        create_user_index(overwrite=False)
+        create_user_movie_index(overwrite=False)
+        create_product_index(overwrite=False)
+        create_user_product_index(overwrite=False)
     except Exception as e:
         print(f"Initialization failed: {e}")
+        raise
+
+
+
+def create_product_index(overwrite=False):
+    """
+    Creates the product index in Redis.
+    :param overwrite: If True, overwrites the existing index.
+    """
+    try:
+        product_index.create(overwrite=overwrite)
+        print("Product index created successfully.")
+    except Exception as e:
+        print(f"Failed to create product index: {e}")
+        raise
+
+def create_user_product_index(overwrite=False):
+    """
+    Creates the user product index in Redis.
+    :param overwrite: If True, overwrites the existing index.
+    """
+    try:
+        user_product_index.create(overwrite=overwrite)
+        print("User product index created successfully.")
+    except Exception as e:
+        print(f"Failed to create user product index: {e}")
+        raise
+
+
+
+
+def search_products_by_vector(query_vector, categories=None, min_price=None, max_price=None, num_results=10):
+    """
+    Performs a vector search with optional filters on genres and release year.
+
+    :param query_vector: Numpy array representing the query vector.
+    :param genres: List of genres to filter by.
+    :param min_year: Minimum release year.
+    :param max_year: Maximum release year.
+    :param num_results: Number of results to return.
+    :return: List of matching movies.
+    """
+    try:
+        # Convert the query vector to bytes
+        vector = np.array(query_vector, dtype=np.float32).tobytes()
+
+        # Create a VectorQuery with filters
+        vq = VectorQuery(
+            vector=vector,
+            vector_field_name="embeddings",
+            num_results=num_results
+        )
+
+        # Perform the query
+        results = product_index.query(vq)
+        return results
+    except (RedisError, ConnectionError) as e:
+        print(f"Redis query failed: {e}")
+        raise
+
+
+def search_similar_product_users(query_vector, index_name='user_profiles', num_results=10):
+    try:
+    # Convert the query vector to bytes
+        vector = np.array(query_vector, dtype=np.float32).tobytes()
+        # Create a VectorQuery
+        vq = VectorQuery(
+            vector=vector,
+            vector_field_name="feature_weights",
+            num_results=num_results
+        )
+
+        # Perform the query
+        results = user_product_index.query(vq)
+        return results
+
+    except (RedisError, ConnectionError) as e:
+        print(f"Failed to fetch similar product users: {e}")
         raise

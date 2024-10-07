@@ -112,3 +112,8 @@ def get_all_products(page=1, page_size=10):
             products.append(product_data)
 
     return products, total_products
+
+
+def get_user_product_profile(user):
+    profile = redis_client.json().get(user.product_profile_key)
+    return profile

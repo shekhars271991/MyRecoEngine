@@ -1,8 +1,9 @@
-from config.config import MOVIE_PROFILE_VECTOR_DIMENSION
-user_schema = {
+from config.config import PRODUCT_PROFILE_VECTOR_DIMENSION
+
+user_product_schema = {
     "index": {
-        "name": "user_index",
-        "prefix": "profile:",
+        "name": "user_product_index",
+        "prefix": "product_profile:",
         "storage_type": "json",
     },
     "fields": [
@@ -10,7 +11,7 @@ user_schema = {
             "name": "feature_weights",
             "type": "vector",
             "attrs": {
-                "dims": MOVIE_PROFILE_VECTOR_DIMENSION,
+                "dims": PRODUCT_PROFILE_VECTOR_DIMENSION,
                 "distance_metric": "COSINE",
                 "algorithm": "HNSW",
                 "datatype": "FLOAT32"
