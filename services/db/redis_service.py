@@ -1,5 +1,6 @@
 import redis
-
+from redis.commands.search.query import Query
+import json
 # Redis client setup with byte responses
 redis_client = redis.Redis(
     host= 'localhost',
@@ -117,3 +118,21 @@ def get_all_products(page=1, page_size=10):
 def get_user_product_profile(user):
     profile = redis_client.json().get(user.product_profile_key)
     return profile
+
+
+
+
+def get_product_query(query_string):
+    query = Query(f"@name:{query_string}")
+    results = redis_client.ft("product_index").search(query)
+    
+    # Extract the documents and remove embeddings
+    documents = []
+    for doc in results.docs:
+        doc_dict = json.loads(doc.json)
+        if 'embeddings' in doc_dict:
+            del doc_dict['embeddings']
+        documents.append(doc_dict)
+
+    return documents
+

@@ -2,13 +2,19 @@ import redis
 from redis.exceptions import RedisError, ConnectionError
 from redisvl.index import SearchIndex
 from redisvl.query import VectorQuery
-from redisvl.query.filter import Tag, Num
+from redisvl.query.filter import Tag, Num, Text
 import numpy as np
 from schemas.movie import movie_schema
 from schemas.user_movie import user_movie_schema
 from schemas.user_product import user_product_schema
 
 from schemas.product import product_schema
+
+
+from redisvl.query import FilterQuery
+from redisvl.query.filter import Tag
+
+
 
 # Initialize the Redis client with exception handling
 try:
@@ -228,3 +234,4 @@ def search_similar_product_users(query_vector, index_name='user_profiles', num_r
     except (RedisError, ConnectionError) as e:
         print(f"Failed to fetch similar product users: {e}")
         raise
+

@@ -11,6 +11,7 @@ from config.config import PRODUCTS_DATA_FILEPATH
 
 from services.products.load_products import load_all_products
 from services.db.redis_service import get_all_products
+from services.db.redis_service import get_product_query
 from services.products.generate_recommendations.recommender_service import get_combined_product_recommendations
 
 
@@ -108,3 +109,20 @@ def load_products():
         return jsonify({'message': 'Products data file not found.'}), 404
     except Exception as e:
         return jsonify({'error': str(e)}), 500
+    
+
+
+@products_routes.route('/query-string', methods=['GET'])
+def get_products_query():
+    # Extract query parameters
+    query_string = request.args.get('query') 
+    if query_string == None:
+        return jsonify({"error": "Provide query string."}), 404
+
+    # Get recommendations with filters
+    products = get_product_query(
+      query_string
+    )
+    
+    return jsonify(products), 200
+
