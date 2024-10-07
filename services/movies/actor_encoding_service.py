@@ -1,7 +1,7 @@
 # services/actor_encoding_service.py
 
 import numpy as np
-from lookups import ACTOR_CLUSTERS
+from config.movie_config import ACTOR_CLUSTERS
 
 # Define clusters for Hollywood actors based on their career paths and specializations
 

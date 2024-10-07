@@ -65,7 +65,7 @@ def insert_product(product, product_vector):
 
     # Prepare the data to store
     product_data = product.copy()
-    product_data['vector'] = product_vector.tolist()  # Convert NumPy array to list
+    product_data['embeddings'] = product_vector.tolist()  # Convert NumPy array to list
 
     # Store the product data as a JSON document in Redis
     redis_client.json().set(product_key, '$', product_data)
@@ -107,7 +107,7 @@ def get_all_products(page=1, page_size=10):
     for key in paginated_keys:
         key_str = key.decode('utf-8') if isinstance(key, bytes) else key
         product_data = redis_client.json().get(key_str)
-        product_data.pop('vector', None)
+        product_data.pop('embeddings', None)
         if product_data:
             products.append(product_data)
 

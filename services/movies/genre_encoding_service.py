@@ -2,7 +2,7 @@
 
 import numpy as np
 from sklearn.preprocessing import OneHotEncoder
-from lookups import GENERES
+from config.movie_config import GENERES
 
 # Initialize OneHotEncoder for genres
 all_genres = GENERES

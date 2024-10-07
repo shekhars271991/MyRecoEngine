@@ -52,7 +52,7 @@ def product_action(user: User):
         return jsonify({'message': 'Product not found.'}), 404
 
     try:
-        user.update_product_status(product_id, rating)
+        user.rate_product(product_id, rating)
     except ValueError as e:
         return jsonify({'message': str(e)}), 400
     return jsonify({'message': 'Action updated successfully'}), 200

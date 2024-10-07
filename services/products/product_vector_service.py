@@ -7,8 +7,7 @@ from services.products.generate_embeddings.categorical_encoding_service import (
     encode_categories,
     encode_features,
     encode_colors,
-    encode_manufacturer,
-    encode_country
+    encode_manufacturer
 )
 from services.products.generate_embeddings.numerical_scaling_service import scale_numerical_features
 
@@ -42,9 +41,6 @@ def create_product_vector(product):
 
     manufacturer_vector = encode_manufacturer(product.get('manufacturer', ''))
     vectors.append(manufacturer_vector)
-
-    country_vector = encode_country(product.get('country_of_origin', ''))
-    vectors.append(country_vector)
 
     # Numerical Features
     numerical_vector = scale_numerical_features(product)

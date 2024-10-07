@@ -1,5 +1,5 @@
 # services/year_encoding_service.py
-from lookups import MIN_YEAR, MAX_YEAR
+from config.movie_config import MIN_YEAR, MAX_YEAR
 def get_year_normalized(release_year):
     """
     Normalizes the release year to a value between 0 and 1.

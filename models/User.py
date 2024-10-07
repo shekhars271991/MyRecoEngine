@@ -7,7 +7,7 @@ from models.Product import Product
 class User:
     def __init__(self, username):
         self.username = username
-        self.movie_profile_key = f"profile:{self.username}"
+        self.movie_profile_key = f"movie_profile:{self.username}"
         self.product_profile_key = f"product_profile:{self.username}"
 
     ### Movie-related Methods (Unchanged) ###
@@ -138,7 +138,7 @@ class User:
     def _update_product_profile_vector(self, profile_vector, product_vector, rating):
         # Normalize rating (assuming rating is between 1 and 5)
         weight_factor = rating / 5.0
-        alpha = LEARNING_RATE  # Learning rate
+        alpha = LEARNING_RATE 
 
         # Convert lists to numpy arrays for vectorized computation
         profile_vector = np.array(profile_vector)

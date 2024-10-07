@@ -5,14 +5,13 @@ from sklearn.preprocessing import MinMaxScaler
 
 import numpy as np
 import json
+from config.numerical_scaling_config import SCALING_CONFIG
 
-# Load predefined scaling parameters from the config file
-with open('config/numerical_scaling_config.json', 'r') as f:
-    scaling_config = json.load(f)
+
 
 # Initialize scaler
 scaler = MinMaxScaler()
-
+scaling_config = SCALING_CONFIG
 def scale_numerical_features(product):
     # Extract the predefined min and max values from the config
     price_min = scaling_config['price']['min']

@@ -1,5 +1,5 @@
-{
-    "categories": [
+
+CATEGORIES =  [
       "Electronics",
       "Audio",
       "Home Appliances",
@@ -34,8 +34,9 @@
       "Heating",
       "Grooming",
       "Toys"
-    ],
-    "features": [
+    ]
+
+FEATURES =  [
       "Noise Cancelling",
       "Bluetooth 5.0",
       "Over-Ear",
@@ -161,8 +162,8 @@
       "USB Powered",
       "3 Speeds",
       "Adjustable Angle"
-    ],
-    "colors": [
+    ]
+COLORS = [
       "Black",
       "White",
       "Gray",
@@ -175,8 +176,9 @@
       "Multi-color",
       "Pink",
       "Brown"
-    ],
-    "manufacturers": [
+    ]
+
+MANUFACTURERS = [
       "SoundCo",
       "VisionTech",
       "ComfortSeating",
@@ -227,19 +229,7 @@
       "RoboFun",
       "SkilletMaster",
       "CoolBreeze"
-    ],
-    "countries": [
-      "China",
-      "South Korea",
-      "USA",
-      "Taiwan",
-      "Italy",
-      "India",
-      "Germany",
-      "Canada",
-      "Vietnam",
-      "Japan",
-      "Belgium"
     ]
-  }
+
+  
   

@@ -3,24 +3,19 @@
 import numpy as np
 from sklearn.preprocessing import OneHotEncoder
 import json
-
-# Load predefined categories from the config file
-with open('config/categories_config.json', 'r') as f:
-    config = json.load(f)
+from config.categories_config import CATEGORIES, FEATURES, COLORS,MANUFACTURERS 
 
 # Extract categories from the config
-categories_list = config['categories']
-features_list = config['features']
-colors_list = config['colors']
-manufacturers_list = config['manufacturers']
-countries_list = config['countries']
+categories_list = CATEGORIES
+features_list = FEATURES
+colors_list = COLORS
+manufacturers_list = MANUFACTURERS
 
 # Initialize OneHotEncoders with predefined categories
 category_encoder = OneHotEncoder(categories=[categories_list], handle_unknown='ignore', sparse_output=False)
 feature_encoder = OneHotEncoder(categories=[features_list], handle_unknown='ignore', sparse_output=False)
 color_encoder = OneHotEncoder(categories=[colors_list], handle_unknown='ignore', sparse_output=False)
 manufacturer_encoder = OneHotEncoder(categories=[manufacturers_list], handle_unknown='ignore', sparse_output=False)
-country_encoder = OneHotEncoder(categories=[countries_list], handle_unknown='ignore', sparse_output=False)
 
 # Fit the encoders (required even when categories are predefined)
 def fit_encoders():
@@ -29,7 +24,6 @@ def fit_encoders():
     feature_encoder.fit(np.array(features_list).reshape(-1, 1))
     color_encoder.fit(np.array(colors_list).reshape(-1, 1))
     manufacturer_encoder.fit(np.array(manufacturers_list).reshape(-1, 1))
-    country_encoder.fit(np.array(countries_list).reshape(-1, 1))
 
 # Call fit_encoders() to fit all encoders
 fit_encoders()
@@ -39,7 +33,6 @@ CATEGORY_VECTOR_SIZE = len(categories_list)
 FEATURE_VECTOR_SIZE = len(features_list)
 COLOR_VECTOR_SIZE = len(colors_list)
 MANUFACTURER_VECTOR_SIZE = len(manufacturers_list)
-COUNTRY_VECTOR_SIZE = len(countries_list)
 
 def encode_categories(categories):
     if categories:
@@ -71,12 +64,4 @@ def encode_manufacturer(manufacturer):
         vector = encoded.flatten()
     else:
         vector = np.zeros(MANUFACTURER_VECTOR_SIZE)
-    return vector
-
-def encode_country(country):
-    if country:
-        encoded = country_encoder.transform([[country]])
-        vector = encoded.flatten()
-    else:
-        vector = np.zeros(COUNTRY_VECTOR_SIZE)
     return vector

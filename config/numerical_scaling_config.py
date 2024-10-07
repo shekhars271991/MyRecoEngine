@@ -1,4 +1,4 @@
-{
+SCALING_CONFIG = {
   "price": {
     "min": 14.99,
     "max": 5000.99
