@@ -1,9 +1,9 @@
 from services.db.redisvl_service import search_similar_users
-from services.db.redis_service import getJson, get_user_profile
+from services.db.redis_service import getJson, get_user_movie_profile
 from config.config import SIMILAR_USER_VECTOR_DISTANCE_THRESHOLD
 
-def get_similar_users_profile(user):
-    profile = get_user_profile(user)
+def get_similar_users_movie_profile(user):
+    profile = get_user_movie_profile(user)
     if profile is None:
         return {
             "error": "User profile not found."
@@ -15,7 +15,7 @@ def get_similar_users_profile(user):
     filtered_results = []
     for result_user in results:
         # Ensure we're not comparing the user with themselves
-        if result_user["id"] != user.profile_key:
+        if result_user["id"] != user.movie_profile_key:
             # Check if the vector distance is less than SIMILAR_USER_VECTOR_DISTANCE_THRESHOLD
             vector_distance = float(result_user.get('vector_distance', 1.0))  # Default to 1.0 if not found
             if vector_distance < SIMILAR_USER_VECTOR_DISTANCE_THRESHOLD:
@@ -30,8 +30,8 @@ def get_similar_users_profile(user):
 
 
 def get_rated_movies_of_related_users(user):
-    # Unpack the result and status code from get_similar_users_profile
-    similar_users, status_code = get_similar_users_profile(user)
+    # Unpack the result and status code from get_similar_users_movie_profile
+    similar_users, status_code = get_similar_users_movie_profile(user)
 
     # Check for errors
     if status_code == 404:
@@ -45,7 +45,7 @@ def get_rated_movies_of_related_users(user):
     # Iterate through the similar users' results
     for result_user in similar_users:
         # Ensure we're not comparing the user with themselves
-        if result_user["id"] != user.profile_key:
+        if result_user["id"] != user.movie_profile_key:
             # Check if the vector distance is less than SIMILAR_USER_VECTOR_DISTANCE_THRESHOLD
             vector_distance = float(result_user.get('vector_distance', 1.0))  # Default to 1.0 if not found
             if vector_distance < SIMILAR_USER_VECTOR_DISTANCE_THRESHOLD:

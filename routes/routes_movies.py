@@ -1,7 +1,7 @@
 from flask import Blueprint, request, jsonify
 from services.auth import authenticate_user, register_user, login_required
 from services.movies.recommender import get_combined_recommendations
-from services.movies.user_based_recommender import get_similar_users_profile
+from services.movies.user_based_recommender import get_similar_users_movie_profile
 from models.Movie import Movie
 from models.User import User
 import json
@@ -151,19 +151,7 @@ def load_movies():
         return jsonify({'error': str(e)}), 500
     
 
-# User Profile Route
-@movie_routes.route('/profile', methods=['GET'])
-@login_required
-def get_user_profile(user: User):
-    try:
-        # Fetch user profile details
-        userprofile_key = "profile:" + user.username
-        profile = getJson(userprofile_key)
-        if 'feature_weights' in profile:
-            profile.pop('feature_weights')
-        return jsonify(profile), 200
-    except Exception as e:
-        return jsonify({'error': str(e)}), 500
+
 
 
 # Similar Users Route
@@ -172,7 +160,7 @@ def get_user_profile(user: User):
 def similar_users(user):
     try:
         # Get recommendations with filters
-        similarUsers, status_code = get_similar_users_profile(
+        similarUsers, status_code = get_similar_users_movie_profile(
             user
         )
         if status_code == 404:

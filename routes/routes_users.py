@@ -5,7 +5,7 @@ from services.auth import authenticate_user, register_user, login_required
 from models.User import User
 import re
 from services.db.redis_service import getJson
-from services.movies.user_based_recommender import get_similar_users_profile
+from services.movies.user_based_recommender import get_similar_users_movie_profile
 
 users_routes = Blueprint('users_routes', __name__, url_prefix='/user')
 
@@ -45,5 +45,17 @@ def login():
     return jsonify({'message': 'Invalid credentials'}), 401
 
 
-
+# User Profile Route
+@users_routes.route('/profile', methods=['GET'])
+@login_required
+def get_user_profile(user: User):
+    try:
+        # Fetch user profile details
+        userprofile_key = "user:" + user.username
+        profile = getJson(userprofile_key)
+        if 'password' in profile:
+            profile.pop('password')
+        return jsonify(profile), 200
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 

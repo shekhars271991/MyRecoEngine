@@ -42,8 +42,8 @@ def getJson(key):
     return redis_client.json().get(key)
 
 
-def get_user_profile(user):
-    profile = redis_client.json().get(user.profile_key)
+def get_user_movie_profile(user):
+    profile = redis_client.json().get(user.movie_profile_key)
     return profile
 
 
