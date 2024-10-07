@@ -10,6 +10,7 @@ from services.db.redis_service import exists, getJson
 from config.config import PRODUCTS_DATA_FILEPATH
 
 from services.products.load_products import load_all_products
+from services.db.redis_service import get_all_products
 
 
 products_routes = Blueprint('products_routes', __name__, url_prefix='/product')
@@ -23,12 +24,9 @@ def get_products(user):
     # Get page and page_size from query parameters (with defaults)
     page = int(request.args.get('page', 1))
     page_size = int(request.args.get('page_size', 10))
-    
-    # Get the status query param (could be "seen", "not_seen", or "new")
-    status = request.args.get('status', None)
 
     # Get paginated products and total count, with the status filter
-    products, total_products = Product.get_all_products(user, page, page_size, status)
+    products, total_products = get_all_products(page, page_size)
 
     # Build the response with pagination info
     response = {

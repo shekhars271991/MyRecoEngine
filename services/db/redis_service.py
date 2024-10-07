@@ -70,3 +70,45 @@ def insert_product(product, product_vector):
     # Store the product data as a JSON document in Redis
     redis_client.json().set(product_key, '$', product_data)
     print(f"Product with SKU '{product['sku']}' inserted into Redis with key '{product_key}'.")
+
+
+def get_all_products(page=1, page_size=10):
+    """
+    Retrieves all products from Redis with pagination.
+
+    :param page: The page number (1-indexed).
+    :param page_size: The number of products per page.
+    :return: A tuple (products, total_products)
+    """
+    # Use SCAN to retrieve all product keys
+    product_keys = []
+    cursor = '0'
+    while True:
+        cursor, keys = redis_client.scan(cursor=cursor, match='product:*', count=1000)
+        product_keys.extend(keys)
+        if cursor == 0 or cursor == '0':
+            break
+
+    # Total number of products
+    total_products = len(product_keys)
+
+    # Sort the keys to have consistent pagination
+    product_keys.sort()
+
+    # Calculate start and end indices for pagination
+    start_index = (page - 1) * page_size
+    end_index = start_index + page_size
+
+    # Slice the keys for the current page
+    paginated_keys = product_keys[start_index:end_index]
+
+    # Retrieve the products
+    products = []
+    for key in paginated_keys:
+        key_str = key.decode('utf-8') if isinstance(key, bytes) else key
+        product_data = redis_client.json().get(key_str)
+        product_data.pop('vector', None)
+        if product_data:
+            products.append(product_data)
+
+    return products, total_products
