@@ -42,11 +42,10 @@ def get_products(user):
     return jsonify(response), 200
 
 
-@products_routes.route('/action', methods=['POST'])
+@products_routes.route('/rate', methods=['POST'])
 @login_required
 def product_action(user: User):
     product_id = request.json.get('product_id')
-    interacted = request.json.get('interacted')
     rating = request.json.get('rating', None)
    
     product_exists = exists(product_id)
@@ -55,7 +54,7 @@ def product_action(user: User):
         return jsonify({'message': 'Product not found.'}), 404
 
     try:
-        user.update_product_status(product_id, interacted, rating)
+        user.update_product_status(product_id, rating)
     except ValueError as e:
         return jsonify({'message': str(e)}), 400
     return jsonify({'message': 'Action updated successfully'}), 200

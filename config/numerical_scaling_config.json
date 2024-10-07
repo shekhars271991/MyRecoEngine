@@ -1,23 +1,22 @@
 {
-    "price": {
-      "min": 0.0,
-      "max": 1000.0
-    },
-    "release_year": {
-      "min": 2000,
-      "max": 2023
-    },
-    "rating": {
-      "min": 0.0,
-      "max": 5.0
-    },
-    "reviews_count": {
-      "min": 0,
-      "max": 10000
-    },
-    "stock": {
-      "min": 0,
-      "max": 1000
-    }
+  "price": {
+    "min": 14.99,
+    "max": 5000.99
+  },
+  "release_year": {
+    "min": 2000,
+    "max": 2024
+  },
+  "rating": {
+    "min": 0,
+    "max": 5
+  },
+  "reviews_count": {
+    "min": 5,
+    "max": 10000
+  },
+  "stock": {
+    "min": 0,
+    "max": 5000
   }
-  
+}
