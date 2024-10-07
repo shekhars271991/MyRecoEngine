@@ -32,8 +32,8 @@ def get_product_recommendations(user, categories=None, min_price=None, max_price
         product_id = result['id']
 
         # Skip the product if the user has already rated it
-        if product_id in rated_products:
-            continue
+        # if product_id in rated_products:
+        #     continue
 
         # Filter based on vector distance
         vector_distance = float(result['vector_distance'])  # Convert to float for comparison

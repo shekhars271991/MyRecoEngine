@@ -26,10 +26,10 @@ def get_combined_product_recommendations(user, categories=None, min_price=None, 
     # Process user-based recommendations
     for reco in user_reco:
         product_id = reco['product_id']
-        product_details = getJson(f"product:{product_id}")  # Fetch product details from Redis
+        product_details = getJson(f"{product_id}")  # Fetch product details from Redis
         if product_details:
             # Remove vector if present
-            product_details.pop('vector', None)
+            product_details.pop('embeddings', None)
 
             # If the product is already in combined_products, it means it's in both lists
             if product_id in combined_products:
