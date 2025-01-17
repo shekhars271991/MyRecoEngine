@@ -13,6 +13,12 @@ Features
 -   **Similar Users**: Get similar user profiles based on movie watching behavior.
 -   **Load Movies**: Load sample movie data into Redis from a JSON file.
 
+
+Architecture
+--------
+
+<img width="836" alt="image" src="https://github.com/user-attachments/assets/beb12e5a-c71d-434c-9a4d-ace4813ae111" />
+
 Frontend
 --------
 
