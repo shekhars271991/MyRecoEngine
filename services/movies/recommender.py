@@ -1,6 +1,6 @@
 from services.movies.user_based_recommender import get_rated_movies_of_related_users
 from services.movies.content_based_recommender import get_recommendations
-from services.movies.redis_service import getJson  # Import the getJson function
+from services.db.redis_service import getJson  # Import the getJson function
 from config import CONTENT_BASED_RECO_COUNT
 
 

@@ -1,0 +1,32 @@
+[
+    {
+        "id": "1",
+        "name": "Smartphone X",
+        "description": "Latest smartphone with advanced features",
+        "price": 999.99,
+        "category": "Electronics",
+        "brand": "TechCo",
+        "rating": 4.5,
+        "stock": 100
+    },
+    {
+        "id": "2",
+        "name": "Laptop Pro",
+        "description": "High-performance laptop for professionals",
+        "price": 1499.99,
+        "category": "Electronics",
+        "brand": "TechCo",
+        "rating": 4.8,
+        "stock": 50
+    },
+    {
+        "id": "3",
+        "name": "Wireless Earbuds",
+        "description": "Premium wireless earbuds with noise cancellation",
+        "price": 199.99,
+        "category": "Electronics",
+        "brand": "AudioTech",
+        "rating": 4.3,
+        "stock": 200
+    }
+] 
