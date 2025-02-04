@@ -3,7 +3,14 @@ PyJWT
 scikit-learn
 redis
 bcrypt
-sentence_transformers
+sentence-transformers==2.2.2
 numpy
 redisvl
 Flask-Cors
+tf-keras
+torch
+transformers
+tqdm
+pandas
+python-dotenv
+gunicorn
