@@ -1,5 +1,5 @@
 import json
-from services.redis_service import redis_client
+from services.movies.redis_service import redis_client
 
 # Get user profile (returns feature vector)
 def get_user_profile(user):
